@@ -88,9 +88,8 @@
     "node": ">=0.12.0"
   },
   "scripts": {
-    "start": "node server",
+    "start": "grunt serve",
     "test": "grunt test",
-	"postinstall": "bower install; grunt build",
     "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update"
   },
   "private": true
