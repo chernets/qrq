@@ -3,9 +3,6 @@
   "version": "0.0.0",
   "main": "server/app.js",
   "dependencies": {
-    "bower": "*",
-    "grunt": "*",
-    "grunt-cli": "*",
     "express": "~4.9.0",
     "morgan": "~1.0.0",
     "body-parser": "~1.5.0",
@@ -88,9 +85,10 @@
     "node": ">=0.12.0"
   },
   "scripts": {
-    "start": "grunt serve",
+    "start": "node server",
     "test": "grunt test",
-    "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update"
+    "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update",
+	"postinstall": "bower install && grunt build"
   },
   "private": true
 }
