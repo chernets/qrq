@@ -2,7 +2,6 @@
 
 angular.module('qrqApp')
   .controller('MainCtrl', function($scope, $http) {
-	$scope.bla = 1;
 	
 	$scope.loadNews = function(){
 		var query = new Parse.Query("qrqNews");
