@@ -27,10 +27,11 @@ module.exports = function(app) {
   app.use(methodOverride());
   app.use(cookieParser());
   app.set('appPath', path.join(config.root, 'client'));
+  app.set('appPathd', path.join(config.root, 'dist'));
 
   if ('production' === env) {
     app.use(favicon(path.join(config.root, 'client', 'favicon.ico')));
-    app.use(express.static(app.get('appPath')));
+    app.use(express.static(app.get('appPathd')));
     app.use(morgan('dev'));
   }
 
