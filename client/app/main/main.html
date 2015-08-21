@@ -1,10 +1,23 @@
 <header></header>
 <navbar></navbar>
 
-<div>
-	<div ng-repeat="(key, itm) in news" class="color">
-		{{itm.get('title_news')}}
-		{{itm.get('text_news')}}
+<div class="container clearfix">
+	<div class="col-sm-12 bg-grey">
+		<div ng-repeat="(key, itm) in news" class=" col-sm-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2>{{itm.get('title_news')}}</h2>
+					<p class="text-success">{{itm.get('text_news')}}</p>
+					<img class="full-width" src="{{itm.get('photo_src')}}"/>
+				</div>
+				
+
+				
+				<div class="panel-body">
+					<div class="cover-photo" style="background-image:url('{{img.src}}')" ng-repeat="(key, img) in itm.get('detail_photos')"></div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>	
 <footer></footer>

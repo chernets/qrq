@@ -4,8 +4,9 @@ angular.module('qrqApp')
   .controller('MainCtrl', function($scope, $http) {
 	
 	$scope.loadNews = function(){
-		var query = new Parse.Query("News");
+		var query = new Parse.Query("news");
 		query.descending("createdAt");
+		query.limit(10);
 		query.find({
 			success: function(results) {
 				$scope.$apply(function() {
