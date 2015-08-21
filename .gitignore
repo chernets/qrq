@@ -2,5 +2,6 @@ node_modules
 public
 .sass-cache
 .idea
+.tmp
 /server/config/local.env.js
 npm-debug.log
