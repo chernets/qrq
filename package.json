@@ -87,7 +87,6 @@
   "scripts": {
    "start": "node server",
     "test": "grunt test",
-    "start": "static -p $PORT dist",
     "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update"
   },
   "private": true
