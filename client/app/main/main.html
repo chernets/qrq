@@ -3,42 +3,42 @@
 
 <section class="fixed_header clearfix">
 		<header></header>
-		<div class="page-container container">
+		<div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
 			<div class="gallery">
-			<div ng-repeat="(key, itm) in news" class="gallery-item" data-height="1" data-width="1">
-			
-					<div class="gallery-slider full-width full-height">
-						<div data-mode="carousel" data-start-now="true" class="live-tile full-width full-height" data-direction="vertical" data-delay="3000">        
-							<div class="cover full-width full-height live-tile-item" alt="{{key}}" style="background-image:url('{{img.src}}')" ng-repeat="(key, img) in itm.get('detail_photos')" ></div>
-							<div class="cover full-width full-height live-tile-item" alt="{{key}}" style="background-image:url('{{itm.get('photo_src')}}')"></div>
+				<div ng-repeat="(key, itm) in news" class="gallery-item" data-height="1" data-width="1">
+				
+						<div class="gallery-slider full-width full-height">
+							<div data-mode="carousel" data-start-now="true" class="live-tile full-width full-height" data-direction="vertical" data-delay="3000">        
+								<div class="cover full-width full-height live-tile-item" alt="{{key}}" style="background-image:url('{{img.src}}')" ng-repeat="(key, img) in itm.get('detail_photos')" ></div>
+								<div class="cover full-width full-height live-tile-item" alt="{{key}}" style="background-image:url('{{itm.get('photo_src')}}')"></div>
+							</div>
 						</div>
-					</div>
-					
-					
-					
-					<!--
-					<div class="gallery-slider full-width full-height">
-						<div class="cover full-width full-height" alt="{{key}}" style="background-image:url('{{img.src}}')" ng-repeat="(key, img) in itm.get('detail_photos')" ></div>
-					</div>-->
-					<div class="gallery-body pull-bottom full-width gradient-grey text-white padding-10 m-b-20">
-							<h3 class="elipsis no-margin nowrap">{{itm.get('title_news')}}</h3>
-							<p class="elipsis p-2-rows no-margin">{{itm.get('text_news')}}</p>
-						<!--<div class="cover pull-left w-100 h-100" style="background-image:url('{{img.src}}')" ng-repeat="(key, img) in itm.get('detail_photos')"></div>-->
-					</div>
-					<div class="bottom-right full-width text-right p-r-10 bg-primary">
-						<div class="inline">
-							<i class="fa fa-clock-o m-r-5 m-l-5"></i>
-							<p class="inline no-margin">{{itm.createdAt}}</p>
+						
+						
+						
+						<!--
+						<div class="gallery-slider full-width full-height">
+							<div class="cover full-width full-height" alt="{{key}}" style="background-image:url('{{img.src}}')" ng-repeat="(key, img) in itm.get('detail_photos')" ></div>
+						</div>-->
+						<div class="gallery-body pull-bottom full-width gradient-grey text-white padding-10 m-b-20">
+								<h3 class="elipsis no-margin nowrap">{{itm.get('title_news')}}</h3>
+								<p class="elipsis p-2-rows no-margin">{{itm.get('text_news')}}</p>
+							<!--<div class="cover pull-left w-100 h-100" style="background-image:url('{{img.src}}')" ng-repeat="(key, img) in itm.get('detail_photos')"></div>-->
 						</div>
-						<div class="inline">
-							<i class="fa fa-eye m-r-5 m-l-5"></i>
-							<p class="inline no-margin">{{itm.get('views')}}</p>
+						<div class="bottom-right full-width text-right p-r-10 bg-primary">
+							<div class="inline">
+								<i class="fa fa-clock-o m-r-5 m-l-5"></i>
+								<p class="inline no-margin">{{itm.createdAt}}</p>
+							</div>
+							<div class="inline">
+								<i class="fa fa-eye m-r-5 m-l-5"></i>
+								<p class="inline no-margin">{{itm.get('views')}}</p>
+							</div>
 						</div>
-					</div>
-					<div class="top-right m-r-10 text-success">
-						<i class="fa fa-circle-o"></i>
-					</div>
-			</div>
+						<div class="top-right m-r-10 text-success">
+							<i class="fa fa-circle-o"></i>
+						</div>
+				</div>
 			</div>
 		</div>
 </section>	
