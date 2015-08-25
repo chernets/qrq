@@ -1,9 +1,13 @@
 <aside ng-controller="NavbarCtrl">
-	<nav>
-		<li><a onClick="mapsGet()" class="menu_active">Карта<span><i class="nav_ico icon-circlek"></i></span></a></li>
-		<li><a onClick="markersGet()" >Точки<span><i class="nav_ico icon-map-marker"></i></span></a></li>
-		<li><a href="/">Квести<span><i class="nav_ico icon-map"></i></span></a></li>
-		<li><a href="/">Про Нас<span><i class="nav_ico icon-qrcode"></i></span></a></li>
-		<li><a onClick="newsGet()" >Новини<span><i class="nav_ico icon-commentroundtyping"></i></span></a></li>
+	<div class="text-right text-white padding-20">
+		<i class="fa fa-circle-o pull-right"></i>
+		<p class="no-margin">QRQ</p>
+	</div>
+	<nav class="main_menu">
+		<li><a onClick="mapsGet()" class="menu_active">Карта<span><i class="fa fa-windows text-white"></i></span></a></li>
+		<li><a onClick="markersGet()" >Точки<span><i class="fa fa-map-signs"></i></span></a></li>
+		<li><a href="/">Квести<span><i class="fa fa-map-o"></i></span></a></li>
+		<li><a href="/">Про Нас<span><i class="fa fa-home"></i></span></a></li>
+		<li><a onClick="newsGet()" >Новини<span><i class="fa fa-newspaper-o"></i></span></a></li>
 	</nav>
 </aside>

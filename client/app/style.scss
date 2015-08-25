@@ -41,7 +41,7 @@ header {
     z-index: 4;
 }
 /* Леваое меню */
-aside {
+navbar {
     background: #2d343c none repeat scroll 0 0;
     border-right: 1px solid #232730;
     box-sizing: border-box;
@@ -63,10 +63,10 @@ aside nav li {
     transition: all 0.3s ease 0s;
 }
 
-aside .menu_active {
+navbar .menu_active {
     color: #10cfbd;
 }
-aside nav li a {
+navbar nav li a {
     box-sizing: border-box;
     color: #999;
     display: inline-block;
@@ -75,10 +75,10 @@ aside nav li a {
     width: 100%;
 }
 
-aside .menu_active span {
+navbar .menu_active span {
     background: #10cfbd none repeat scroll 0 0;
 }
-aside nav span {
+navbar nav span {
     background: #21252d none repeat scroll 0 0;
     display: inline-block;
     float: right;
@@ -89,14 +89,14 @@ aside nav span {
     top: 0;
     width: 40px;
 }
-aside:hover {
+navbar:hover {
     left: 0;
 }
 
-aside:hover a {
+navbar:hover a {
     margin: 0;
 }
-aside nav li a:hover {
+navbar nav li a:hover {
     color: #eee;
     font-family: roboto-medium;
     text-decoration: none;
@@ -107,9 +107,9 @@ section {
     padding-left: 70px;
     width: 100%;
 }
-
-
 .fixed_header header {
+    left: 0;
+    padding-left: 70px;
     position: fixed;
 }
 
