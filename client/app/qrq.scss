@@ -696,6 +696,16 @@
 .fs-16 {
     font-size: 16px !important;
 }
+.fs-17 {
+    font-size: 17px !important;
+}
+.fs-18 {
+    font-size: 18px !important;
+}
+
+.thin {
+    font-family: roboto-thin;
+}
 .text-master {
     color: #626262 !important;
 }
@@ -712,7 +722,7 @@
     color: #48b0f7 !important;
 }
 .text-success {
-    color: #10cfbd !important;
+    color: #1bc98e !important;
 }
 .text-info {
     color: #3b4752 !important;
@@ -724,7 +734,7 @@
     color: #c9a843 !important;
 }
 .text-danger {
-    color: #f55753 !important;
+    color: #e64759 !important;
 }
 .text-primary {
     color: #6d5cae !important;
@@ -894,7 +904,10 @@ hr.dotted {
 .bold {
     font-weight: bold !important;
 }
-
+p span {
+    color: #f55753;
+    font-family: roboto-thin;
+}
 /* mojno obdymat */
 .panel {
     border-radius: 1px;

@@ -166,3 +166,32 @@ section {
 .gallery {
     margin: 40px auto;
 }
+.plane-number {
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    width: 80px;
+}
+.plane-info {
+    color: white;
+    font-size: 14px;
+    height: 100%;
+    padding: 5px 20px;
+    vertical-align: middle;
+    width: calc(100% - 84px);
+}
+.plane-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 30px;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+.plane-item:hover {
+    height: 80px;
+}
+.plane-info span {
+    padding-left: 10px;
+}
+.plane-item:hover .hide {
+    display: block !important;
+}
