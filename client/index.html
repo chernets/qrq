@@ -27,6 +27,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+
     <div ui-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -49,12 +50,23 @@
       <!-- bower:js -->
       <script src="bower_components/jquery/dist/jquery.js"></script>
       <script src="bower_components/angular/angular.js"></script>
-      <script src="bower_components/angular-resource/angular-resource.js"></script>
-      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-      <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+      <script src="bower_components/get-style-property/get-style-property.js"></script>
+      <script src="bower_components/get-size/get-size.js"></script>
+      <script src="bower_components/eventie/eventie.js"></script>
+      <script src="bower_components/doc-ready/doc-ready.js"></script>
+      <script src="bower_components/eventEmitter/EventEmitter.js"></script>
+      <script src="bower_components/matches-selector/matches-selector.js"></script>
+      <script src="bower_components/outlayer/item.js"></script>
+      <script src="bower_components/outlayer/outlayer.js"></script>
+      <script src="bower_components/imagesloaded/imagesloaded.js"></script>
+      <script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
+      <script src="bower_components/angular-masonry/angular-masonry.js"></script>
+      <script src="bower_components/angular-resource/angular-resource.js"></script>
+      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/lodash/dist/lodash.compat.js"></script>
       <!-- endbower -->
     <!-- endbuild -->
 <!-- build:js({.tmp,client}) app/parse-gen-js.js -->
@@ -62,9 +74,12 @@
 <!-- endbuild -->
     <!-- build:js({.tmp,client}) app/app.js -->
       <script src="app/app.js"></script>
+	  <script src="bower_components/masonry/masonry.js"></script>
       <!-- injector:js -->
       <script src="app/main/main.controller.js"></script>
       <script src="app/main/main.js"></script>
+      <script src="app/users/users.controller.js"></script>
+      <script src="app/users/users.js"></script>
       <script src="components/footer/footer.controller.js"></script>
       <script src="components/footer/footer.directive.js"></script>
       <script src="components/header/header.controller.js"></script>

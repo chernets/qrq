@@ -101,6 +101,16 @@ navbar nav li a:hover {
     font-family: roboto-medium;
     text-decoration: none;
 }
+navbar nav span i {
+    bottom: 0;
+    height: 15px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15px;
+}
 section {
     background: #f5f5f5 none repeat scroll 0 0;
     height: 100%;
@@ -180,18 +190,57 @@ section {
     vertical-align: middle;
     width: calc(100% - 84px);
 }
+.plane {
+    position: relative;
+    width: 100%;
+}
 .plane-item {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     height: 30px;
     overflow: hidden;
-    transition: all 0.3s ease 0s;
+	width: 100%;
+    transition: all 0.3s ease 0s !important;
 }
 .plane-item:hover {
-    height: 80px;
+    background: black none repeat scroll 0 0;
+    height: auto;
+    left: 5px !important;
+    z-index: 2;
+}
+.plane-item:nth-child(1) {
+    background: #1bc98e none repeat scroll 0 0;
+    border-color: #1bc98e;
+    text-shadow: 1px 1px 3px black;
+}
+.plane-item:nth-child(2) {
+    background: #a94442 none repeat scroll 0 0;
+    border-color: #a94442;
+    text-shadow: 1px 1px 3px black;
+}
+.plane-item:nth-child(3) {
+    background: #8a6d3b none repeat scroll 0 0;
+    border-color: #8a6d3b;
+    text-shadow: 1px 1px 3px black;
 }
 .plane-info span {
     padding-left: 10px;
 }
 .plane-item:hover .hide {
     display: block !important;
+}
+@media screen and (max-width: 768px) {
+	.xs-no-padding{
+		padding:0;
+	}
+}
+navbar:hover .main-logo{
+    font-family: roboto-thin;
+   /* font-size: 65px;
+    line-height: 60px;*/
+    text-align: center;
+}
+.main-logo {
+    color: white;
+    font-size: 20px;
+    text-align: right;
 }
