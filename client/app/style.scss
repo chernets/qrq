@@ -48,7 +48,6 @@ navbar {
     float: left;
     height: 100%;
     left: -130px;
-    padding: 15px 0;
     position: fixed;
     /*top: 60px;*/
     transition: all 0.3s ease 0s;
@@ -110,6 +109,24 @@ navbar nav span i {
     right: 0;
     top: 0;
     width: 15px;
+}
+.user_nav_block {
+    background-size: cover;
+    box-sizing: border-box;
+    height: 150px;
+    margin-bottom: 40px;
+    width: 100%;
+	position:relative;
+}
+.nav_avatar {
+    border: 2px solid #10cfbd;
+    border-radius: 50%;
+    bottom: 10px;
+    height: 40px;
+    left: 10px;
+    position: absolute;
+    width: 40px;
+    z-index: 5;
 }
 section {
     background: #f5f5f5 none repeat scroll 0 0;
