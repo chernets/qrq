@@ -36,8 +36,10 @@
 					</div>
 				</div>
 				<div class="col-sm-6">
-					<div class="" masonry='{ "isFitWidth": true,"percentPosition": true}'>
-						<div ng-repeat="(key, itm) in news" class="cover w-100 h-100 masonry-brick small-pictures" alt="{{key}}" style="background-image:url('{{itm.get('photo_src')}}')" ></div>
+					<div class="row">
+						<div masonry='{ "isFitWidth": true,"percentPosition": true}'>
+							<div ng-repeat="(key, itm) in news" class="cover w-100 h-100 masonry-brick small-pictures" alt="{{key}}" style="background-image:url('{{itm.get('photo_src')}}')" ></div>
+						</div>
 					</div>
 				</div>
 			</div>
