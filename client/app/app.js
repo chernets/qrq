@@ -6,7 +6,8 @@ angular.module('qrqApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'wu.masonry'
+  'wu.masonry',
+  'ngMap'
 ])
   .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider

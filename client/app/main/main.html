@@ -7,7 +7,7 @@
 			<div class="row bg-master-darkest">
 				<div class="col-sm-6">
 					<div class="row">
-						<img src="http://content.stamen.com/files/tableau-dark-1.png" class="full-width"/>
+						<map center="-34.397, 150.644" zoom="8"></map>
 					</div>
 					<div class="row">
 						<div class="col-sm-5">
@@ -36,8 +36,8 @@
 					</div>
 				</div>
 				<div class="col-sm-6">
-					<div ng-repeat="(key, itm) in news" masonry='{ "isFitWidth": true,"percentPosition": true}'> 
-						<div class="cover w-100 h-100 masonry-brick" alt="{{key}}" style="background-image:url('{{img.src}}')" ng-repeat="(key, img) in itm.get('detail_photos')" ></div>
+					<div class="" masonry='{ "isFitWidth": true,"percentPosition": true}'>
+						<div ng-repeat="(key, itm) in news" class="cover w-100 h-100 masonry-brick small-pictures" alt="{{key}}" style="background-image:url('{{itm.get('photo_src')}}')" ></div>
 					</div>
 				</div>
 			</div>

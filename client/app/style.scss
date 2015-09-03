@@ -244,3 +244,10 @@ navbar:hover .main-logo{
     font-size: 20px;
     text-align: right;
 }
+.small-pictures {
+    transition: all 0.3s ease 0s;
+}
+.small-pictures:hover{
+	transform: scale(1.5);
+	z-index: 5;
+}
