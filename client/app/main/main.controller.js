@@ -6,7 +6,7 @@ angular.module('qrqApp')
 	$scope.loadNews = function(){
 		var query = new Parse.Query("news");
 		query.descending("createdAt");
-		query.limit(30);
+		query.limit(10);
 		query.find({
 			success: function(results) {
 				$scope.$apply(function() {
@@ -37,6 +37,4 @@ angular.module('qrqApp')
 	
 	$scope.loadUsers();
 	$scope.loadNews();
-
-
   });
