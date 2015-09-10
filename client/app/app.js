@@ -7,6 +7,7 @@ angular.module('qrqApp', [
   'ui.router',
   'ui.bootstrap',
   'wu.masonry',
+  'uiGmapgoogle-maps',
   'ngMap'
 ])
   .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
