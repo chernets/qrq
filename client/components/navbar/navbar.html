@@ -1,11 +1,11 @@
 <aside ng-controller="NavbarCtrl">
 	<div class="">
-		<div class="user_nav_block" style="background-image:url('https://scontent.xx.fbcdn.net/hphotos-xfa1/t31.0-8/s720x720/1529721_791202327654304_6876009856108794981_o.jpg')">
-			<div class="nav_avatar" style="background-image:url('https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/v/t1.0-1/c206.44.548.548/s50x50/946156_408438015930739_479948438_n.jpg?oh=c3b570cbc183634a2b8b52297479f5b3&oe=5650B060&__gda__=1448581361_f79ea1dc980048b4322d04cc63b7c9b5')">
+		<div class="user_nav_block cover" style="background-image:url('{{user.get('big_avatar')}}')">
+			<div class="nav_avatar cover" style="background-image:url('{{user.get('smoll_avatar')}}')">
 			</div>
 			<div class="top-right m-t-10 m-r-20">
-				<h3 class="no-margin text-white">Yura</h3>
-				<h5 class="no-margin text-white">Tronyak</h5>
+				<h3 class="no-margin text-white">{{user.get('first_name')}}</h3>
+				<h5 class="no-margin text-white">{{user.get('last_name')}}</h5>
 			</div>
 		</div>
 	</div>

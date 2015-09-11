@@ -3,8 +3,9 @@
 angular.module('qrqApp')
   .controller('NavbarCtrl', function ($scope) {
 	  
-	  
-	$scope.currentUser = function(){
+	$scope.user = Parse.User.current();
+	
+	/*$scope.currentUser = function(){
 		var currentUser = Parse.User.current();
 		if (currentUser) {
 			console.log(currentUser);
@@ -13,7 +14,8 @@ angular.module('qrqApp')
 		}
 	}
 	
-	$scope.currentUser();
+	$scope.currentUser();*/
+	
     $scope.menu = [{
       'title': 'Home',
       'state': 'main'

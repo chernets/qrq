@@ -1,21 +1,19 @@
 <div ng-controller="HeaderCtrl">
 	<div class="hidden-xs">
-			<div class="mobile-header-avatar inline vm m-r-20" style="background-image:url('https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/v/t1.0-1/c206.44.548.548/s50x50/946156_408438015930739_479948438_n.jpg?oh=c3b570cbc183634a2b8b52297479f5b3&amp;oe=5650B060&amp;__gda__=1448581361_f79ea1dc980048b4322d04cc63b7c9b5')" ></div>
-			<h4 class="text-white inline no-margin vm">Yura</h4>
-			<h5 class="text-white inline no-margin text-danger vm">Tronyak</h5>
+			<div class="mobile-header-avatar inline vm m-r-20 cover" style="background-image:url('{{user.get('smoll_avatar')}}')" ></div>
+			<h4 class="text-white inline no-margin vm">{{user.get('first_name')}}</h4>
+			<h5 class="text-white inline no-margin text-danger vm">{{user.get('last_name')}}</h5>
 			<div class="pull-right text-right">
-				<button class="btn btn-primary">Login</button>
+				<button class="btn btn-primary" ng-show="user == null" ng-click="login()">Login</button>
+				<button class="btn btn-primary" ng-show="user != null" ng-click="logout()">Exit</button>
 			</div>
 	</div>
 	<div class="visible-xs mobile_menu">
-			<div class="mobile-header-avatar inline vm m-r-20" style="background-image:url('https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/v/t1.0-1/c206.44.548.548/s50x50/946156_408438015930739_479948438_n.jpg?oh=c3b570cbc183634a2b8b52297479f5b3&amp;oe=5650B060&amp;__gda__=1448581361_f79ea1dc980048b4322d04cc63b7c9b5')" ></div>
-	
-			<h4 class="text-white inline no-margin vm">Yura</h4>
-			<h5 class="text-white inline no-margin text-danger vm">Tronyak</h5>
-		
+		<div class="mobile-header-avatar inline vm m-r-20" style="background-image:url('{{user.get('smoll_avatar')}}')" ></div>
+		<h4 class="text-white inline no-margin vm">{{user.get('first_name')}}</h4>
+		<h5 class="text-white inline no-margin text-danger vm">{{user.get('last_name')}}</h5>		
 		<div class="pull-right m-t-5">
 			<i class="fa fa-bars text-success"></i>
 		</div>
-	</div> 
-	
+	</div> 	
 </div>
