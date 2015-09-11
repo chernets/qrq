@@ -1,0 +1,40 @@
+
+<navbar class="hidden-xs"></navbar>
+
+<section class="fixed_header clearfix xs-no-padding">
+		<header></header>
+		<div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+			<div class="row bg-master-darkest">
+				<div class="col-sm-6">
+					<div class="row">
+						<map center="-34.397, 150.644" zoom="8"></map>
+					</div>
+					<div class="row">
+						<div class="col-sm-5">
+							<p class="text-white fs-10 inline">time <span class="fs-16 bold thin">QUEST:</span></p>
+							<p class="inline fs-18 text-white m-l-15">00:18:45</p>
+						</div> 
+						<div class="col-sm-5">
+							<p class="text-white fs-10 inline"><span class="fs-16 bold thin">Checkpoints:</span></p>
+							<p class="inline fs-18 text-white m-l-15">8</p>
+						</div>
+						<div class="col-sm-2 text-right">
+							<i class="fa fa-circle-o text-success "></i>
+							<i class="fa fa-bars text-success m-l-20"></i>
+						</div>
+					</div>
+					<div class="plane" masonry>
+						<div class="plane-item full-widht clearfix masonry-brick" ng-repeat="(key, itm) in user" data-id="{{key}}">
+							<div class="plane-number inline"><p class="no-margin">{{key}}<span class="m-l-5">st</span></p></div>
+							<div class="plane-info inline ">
+								<p class="no-margin"><i class="fa fa-user m-r-15 text-success"></i>{{itm.get('username')}}</p>
+								<p class="no-margin hide"><i class="fa fa-flag-o m-r-15"></i>3 <span>checkpoints</span></p>
+								<p class="no-margin hide"><i class="fa fa-bicycle m-r-15"></i>max. speed<span>35 km/h</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>	
+<footer></footer>
