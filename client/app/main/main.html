@@ -3,12 +3,28 @@
 
 <section class="fixed_header clearfix xs-no-padding">
 		<header></header>
-		<div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">		
+		<div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1>Ближайшие Квесты</h1>
+					<div class="" >
+						<div class="col-sm-4 gallery-item" ng-repeat="(key, que) in n_quests">
+							<div class="row">
+								<div class="cover full-width full-height" style="background-image:url('{{que.get('quest_big_photo')}}')">
+								{{que.get('time_begin')}}
+								{{que.get('quest_name')}}
+								{{que.get('description')}}
+								{{que.get('quest_location')}}
+								{{que.get('points_of_quest')}}
+								{{que.get('quest_active')}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="gallery" masonry='{ "isFitWidth": true,"gutter": 10}'>
 				<div ng-repeat="(key, itm) in news" class="gallery-item masonry-brick" data-width="1" data-height="1" ng-click="open(itm.id)" attr="{{itm.id}}">
-						<!--
-	>
-						-->
 
 						
 						
