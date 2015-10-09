@@ -1,35 +1,9 @@
-
-<navbar ng-class={active:menu}></navbar>
-
-<section class="<!--fixed_header--> clearfix xs-no-padding">
+<navbar class="hidden-xs"></navbar>
+<section class=" clearfix xs-no-padding">
 		<header></header>
-		<div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20  ">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="col-sm-6 text-center" >
-						<div class="col-sm-6 near_quest" ng-repeat="(key, que) in n_quests">
-							<div class="cover relative" style="background-image:url('{{que.get('quest_big_photo')}}')">
-								<h3 class="text-white bottom-left p-l-15 ng-binding">{{que.get('quest_name')}} </h3>
-							</div>
-							
-							
-						</div>
-						<!--
-						<div class="col-sm-8">
-							<h2 class="text-danger">{{que.get('time_begin')}}</h2>
-							<h3>{{que.get('quest_name')}}</h3>
-							<h4>{{que.get('quest_location')}}</h4>
-							<p>{{que.get('description')}}</p>
-
-							{{que.get('points_of_quest')}}
-							{{que.get('quest_active')}}  
-						</div>
-						-->
-					</div>
-				</div>
-			</div>
+		<div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
 			<div class="gallery" masonry='{ "isFitWidth": true,"gutter": 10}'>
-				<div ng-repeat="(key, itm) in news" class="gallery-item masonry-brick" data-width="1" data-height="1" ng-click="open(itm.id)" attr="{{itm.id}}">
+				<div ng-repeat="(key, itm) in news" class="gallery-item masonry-brick" data-width="{{key == 2 ? '2' : '1'}}" data-height="{{key == 3 ? '2' : '1'}}" ng-click="open(itm.id)" attr="{{itm.id}}">
 
 						
 						
@@ -70,8 +44,5 @@
 				
 				</div>
 			</div>
-			
-			
 		</div>
-</section>	
-<footer></footer>
+</section>

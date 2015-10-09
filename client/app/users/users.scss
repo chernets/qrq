@@ -1,5 +1,42 @@
-.color{
-	color:red;
-	border: 1px solid green;
-	margin: 5px 0;
+
+$orange:#FF8300;
+
+.users_blocks {
+    background: #121212 none repeat scroll 0 0;
+    border-bottom: 1px solid #ff8300;
+    box-sizing: border-box;
+	.avatar_bloccer{
+		z-index:2;
+	}
+	.changer{
+		left: 0;
+		transition: all 0.3s ease 0s;
+		z-index: 1;
+	}
+	.small_users_det_photo {
+		border: 1px solid $orange;
+		border-radius: 50%;
+		height: 40px;
+		width: 40px;
+	}
+	&.active .changer {
+		left: -150px;
+	}
+	.hidden_user_button {
+		box-sizing: border-box;
+		width: 150px;
+		position: absolute;
+		right: 0;
+		z-index: 0;
+		height:100%;
+		top: 0;
+		button {
+			border: 0 none;
+			border-radius: 0;
+			height: 100%;
+			text-align: center;
+			width: 100%;
+			box-sizing: border-box;
+		}
+	}
 }

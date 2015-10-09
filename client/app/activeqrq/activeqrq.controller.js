@@ -19,4 +19,22 @@ angular.module('qrqApp')
 	}
 	
 	$scope.loadUsers();
+	
+	
+	$scope.one_quest = function(){
+		var query = new Parse.Query("Quest");
+		query.get("xnF2T8yPul", {
+			success: function(one_quest) {
+				console.log(one_quest)
+				$scope.$apply(function() {
+					$scope.one_quest_info = one_quest;
+				});
+			},
+			error: function(object, error) {
+				console.log(error);
+			}
+		});
+	}
+	
+	$scope.one_quest();
   });

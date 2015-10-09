@@ -1,4 +1,5 @@
 <div ng-controller="HeaderCtrl">
+<!--
 	<div class="hidden-xs">
 			<div class="mobile-header-avatar inline vm m-r-20 cover" style="background-image:url('{{user.get('smoll_avatar')}}')" ></div>
 			<h4 class="text-white inline no-margin vm">{{user.get('first_name')}}</h4>
@@ -8,8 +9,9 @@
 				<button class="btn btn-primary" ng-show="user != null" ng-click="logout()">Exit</button>
 			</div>
 	</div>
-	<div class="visible-xs mobile_menu">
-		<div class="mobile-header-avatar inline vm m-r-20" style="background-image:url('{{user.get('smoll_avatar')}}')" ></div>
+	-->
+	<div class="visible-xs mobile_menu" ng-click="showMenu()">
+		<div class="mobile-header-avatar inline vm m-r-20 cover " style="background-image:url('{{user.get('smoll_avatar')}}')" ></div>
 		<h4 class="text-white inline no-margin vm">{{user.get('first_name')}}</h4>
 		<h5 class="text-white inline no-margin text-danger vm">{{user.get('last_name')}}</h5>		
 		<div class="pull-right m-t-5">

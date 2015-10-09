@@ -1,10 +1,15 @@
 'use strict';
 
 angular.module('qrqApp')
-  .controller('HeaderCtrl', function ($scope) {
+  .controller('HeaderCtrl', function ($scope, $rootScope) {
 
+	
 	$scope.user = Parse.User.current();
-
+	
+	$scope.showMenu = function(){
+		$rootScope.menu = !$rootScope.menu;
+		return $rootScope.menu;
+	}
 	
 	$scope.login = function(){
 		Parse.FacebookUtils.logIn("public_profile,user_friends,user_likes,email,user_about_me", {
@@ -68,14 +73,19 @@ angular.module('qrqApp')
 			  }
 			}
 		);
-		FB.api('/me', function(response) {
+		FB.api('/me',{fields: 'name,last_name,first_name,birthday,currency,email,gender,hometown,location,locale,website'}, function(response) {
 			user.set("username", response.name);
 			user.set("link_site", response.link);
 			user.set("gender", response.gender);
 			user.set("first_name", response.first_name);
+			user.set("hometown", response.hometown);
 			user.set("last_name", response.last_name);
+			user.set("birthday", response.birthday);
 			user.set("facebook_id", response.id);
 			user.set("email", response.email);
+			user.set("location", response.location);
+			user.set("locale", response.locale);
+			user.set("website", response.website);
 			user.save(null, {
 			  success: function(user_save) {
 				//notification("Сохраняем Вашы данные","info",10);

@@ -21,7 +21,7 @@ angular.module('qrqApp')
 	$scope.near_quests = function(){
 		var query = new Parse.Query("Quest");
 		query.descending("time_begin");
-		query.limit(1);
+		query.limit(2);
 		query.find({
 			success: function(results) {
 				$scope.$apply(function() {

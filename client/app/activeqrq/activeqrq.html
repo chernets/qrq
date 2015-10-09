@@ -34,6 +34,19 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-sm-6 text-primary">
+					<h2>{{one_quest_info.id}}</h2>
+					<h3>{{one_quest_info.get('quest_name')}}</h3>
+					<h4>{{one_quest_info.get('description')}}</h4>
+					<p>{{one_quest_info.get('quest_active')}}</p>
+					<table class="full-width">
+						<tr ng-repeat="(key, q_item) in one_quest_info.get('points_of_quest')">
+							<td>{{key}}</td>
+							<td>{{q_item}}</td>
+							<td><qrcode data="http://example.com" href="http://example.com"></qrcode></td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
 </section>	

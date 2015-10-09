@@ -10,9 +10,11 @@ angular.module('qrqApp', [
   'uiGmapgoogle-maps',
   'ngMap'
 ])
-  .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-    $urlRouterProvider
-      .otherwise('/');
-
-    $locationProvider.html5Mode(true);
-  });
+.run(function($rootScope){
+	$rootScope.menu = false;
+})
+.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+	$urlRouterProvider
+	  .otherwise('/');
+	$locationProvider.html5Mode(true);
+});
