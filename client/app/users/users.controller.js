@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('qrqApp')
-  .controller('UsersCtrl', function($scope, $http) {
+  .controller('UsersCtrl', function($scope, $http, $rootScope) {
+	$rootScope.menu = "users";
 	var curuser = Parse.User.current();
 	
 	$scope.loadUsers = function(){
@@ -28,36 +29,48 @@ angular.module('qrqApp')
 	
 	$scope.loadUsers();
 	
-	$scope.addFollow = function(id){
-		curuser.get('followers').push(id);
+	$scope.addFollow = function(data){
+		var newfollowers = [];
+		if(curuser.get('followers')){
+			newfollowers = curuser.get('followers');
+			newfollowers.push(data.id);
+		}else{
+			newfollowers.push(data.id);
+		}
+		curuser.set("followers", newfollowers);
 		curuser.save(null, {
-			success: function(curuser) {
-				curuser.set("followers", curuser.get('followers'));    
+			success: function(curuser) {				
+				data.cheakFollows = true;
 			}
 		});	
 	}
 	
 	$scope.delFollow = function(data){
 		var newfollowers = [];
-		for(var i=0; i<curuser.get('followers').length; i++){
-			if(data != curuser.get('followers')[i]){
-				newfollowers.push(curuser.get('followers')[i]);
+			for(var i=0; i<curuser.get('followers').length; i++){
+				if(data.id != curuser.get('followers')[i]){
+					newfollowers.push(curuser.get('followers')[i]);
+				}
 			}
-		}
+
 		console.log(newfollowers);
+		curuser.set("followers", newfollowers);
 		curuser.save(null, {
 			success: function(curuser) {
-				curuser.set("followers", newfollowers);
+				data.cheakFollows = false;
 			}
 		});
 	}
 	
-	$scope.cheakFollow = function(data){		
-		for(var i=0; i<curuser.get('followers').length; i++){
-			if(data == curuser.get('followers')[i]){						
-				return true;
+	$scope.cheakFollow = function(data){
+		if(curuser.get('followers')){
+			for(var i=0; i<curuser.get('followers').length; i++){
+				if(data == curuser.get('followers')[i]){						
+					return true;
+				}
 			}
 		}
 		return false;
 	}
+
   });

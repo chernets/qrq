@@ -11,12 +11,12 @@
 	</div>
 
 	<nav class="main_menu">
-		<li><a class="menu_active">Карта<span><i class="fa fa-windows text-white"></i></span></a></li>
-		<li><a >Точки<span><i class="fa fa-map-signs"></i></span></a></li>
-		<li><a>Квести<span><i class="fa fa-map-o"></i></span></a></li>
-		<li><a>Про Нас<span><i class="fa fa-home"></i></span></a></li>
-		<li><a href="/news">Новини<span><i class="fa fa-newspaper-o"></i></span></a></li>
-		<li><a  href="/users">Користувачі<span><i class="fa fa-newspaper-o"></i></span></a></li>
+		<li><a ng-class="{'menu_active': menu == ''}">Карта<span><i class="fa fa-windows text-white"></i></span></a></li>
+		<li><a ng-class="{'menu_active': menu == ''}">Точки<span><i class="fa fa-map-signs"></i></span></a></li>
+		<li><a ng-class="{'menu_active': menu == ''}">Квести<span><i class="fa fa-map-o"></i></span></a></li>
+		<li><a ng-class="{'menu_active': menu == ''}">Про Нас<span><i class="fa fa-home"></i></span></a></li>
+		<li><a ng-class="{'menu_active': menu == 'news'}" href="/news">Новини<span><i class="fa fa-newspaper-o"></i></span></a></li>
+		<li><a ng-class="{'menu_active': menu == 'users'}" href="/users">Користувачі<span><i class="fa fa-newspaper-o"></i></span></a></li>
 		<li><a ng-show="user == null" ng-click="login()">login</a></li>
 		<li><a ng-show="user != null" ng-click="logout()">logout</a></li>
 		

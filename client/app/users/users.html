@@ -20,10 +20,10 @@
 								<small ng-show="itm.cheakFollows" class="no-margin bottom-right hint-text text-success p-r-15">You R follow him</small>
 							</div>
 							<div class="hidden_user_button" ng-hide="itm.cheakFollows">
-								<button  ng-click="addFollow(itm.id)" class="btn btn-primary">+ Follow</button>
+								<button  ng-click="addFollow(itm)" class="btn btn-primary">+ Follow</button>
 							</div>
 							<div class="hidden_user_button " ng-show="itm.cheakFollows">
-								<button  ng-click="delFollow(itm.id)" class="btn btn-danger">- unFollow</button>
+								<button  ng-click="delFollow(itm)" class="btn btn-danger">- unFollow</button>
 							</div>
 						</div>
 						
