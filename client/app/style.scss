@@ -15,7 +15,20 @@
 	src: url('../assets/fonts/RobotoCondensed-Thin.ttf')  format('truetype');
 }
 body{
-	font-family:"Roboto-Light";
+	font-family:Helvetica;
+	background:#000;
+}
+$orange: #ff3000;
+$light: 'Roboto-Light';
+
+.near_quests .photo {
+    height: 150px;
+}
+p {
+    color: #999;
+}
+h1,h2,h3,h4,h5{
+	color: $orange;
 }
 header {
     background: #1d252d none repeat scroll 0 0;
@@ -87,7 +100,6 @@ navbar:hover a {
 }
 navbar nav li a:hover {
     color: #eee;
-    font-family: roboto-medium;
     text-decoration: none;
 }
 navbar nav span i {
@@ -140,10 +152,13 @@ navbar nav span i {
 	overflow: hidden;
 }
 section {
-    background: #f5f5f5 none repeat scroll 0 0;
+    background: #000 none repeat scroll 0 0;
     height: 100%;
     padding-left: 70px;
     width: 100%;
+}
+.row {
+    border-bottom: 1px solid $orange;
 }
 .fixed_header header {
     left: 0;
@@ -154,37 +169,9 @@ section {
 .fixed_header {
     padding-top:60px;
 }
-
 .gallery-item {
-    background-color: #000;
-    cursor: default;
-    height: 240px;
     margin-bottom: 10px;
-    overflow: hidden;
-    position: relative;
-    width: 280px;
-}
-.gallery-item:hover {
-    cursor: pointer;
-}
-.gallery-item[data-width="1"] {
-    width: 280px;
-}
-.gallery-item[data-width="2"] {
-    width: 570px;
-}
-.gallery-item[data-height="1"] {
-    height: 240px;
-}
-.gallery-item[data-height="2"] {
-    height: 490px;
-}
-.gallery-item:hover .cover{
-    opacity: 0.6;
-}
-.gallery-item   .cover{
-    opacity: 1;
-    transition: opacity 0.35s ease 0s;
+    max-width: 230px;
 }
 .elipsis {
     overflow: hidden;
@@ -192,6 +179,11 @@ section {
 }
 .p-2-rows {
     max-height: 40px;
+}
+.near_text {
+    max-height: 84px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .nowrap{
 	white-space: nowrap;
