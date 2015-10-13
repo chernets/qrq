@@ -1,0 +1,13 @@
+$input_green:#4caf50;
+
+.input-group {
+    background: transparent none repeat scroll 0 0;
+    margin-bottom: 20px;
+    width: 100%;
+input {
+    background: transparent none repeat scroll 0 0;
+	border:0;
+    border-bottom: 2px solid $input_green;
+	border-radius: 0;
+}
+}

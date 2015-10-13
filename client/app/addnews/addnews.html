@@ -2,5 +2,35 @@
 <section class=" clearfix xs-no-padding">
 		<header></header>
 		<div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+			<h3>Добавление Фото</h3>
+			
+				<div class="col-sm-6">
+					<form validate  class="" enctype="multipart/form-data">
+						<div class="input-group">
+							<input ng-model="newsadd.file" class="" type="file" name="file" file-model="fileToUpload" required/>
+						</div>
+						<div class="input-group">
+							<label for="title">Title</label>
+							<input ng-model="newsadd.title" id="title" type="text" placeholder="Title" class="form-control" required>
+						</div>
+						<div class="input-group">
+							<label for="text_news">Title</label>
+							<textarea ng-model="newsadd.text" type="text" placeholder="Text news" class="form-control" required></textarea>
+						</div>
+						<button type="submit" ng-click="update(user)" class="btn btn-primary">Сохранить</button> 
+						<pre>newsadd = {{newsadd | json}}</pre>
+					</form>
+				</div>
+
+				
+				
+
+				<div class="col-sm-6">
+					<img src="{{newsadd.file }}"/>
+					<h5>{{mainform.username}}</h5>
+					<h4>{{newsadd.title}}</h4>
+					<p>{{newsadd.text}}</p>
+				</div>
+			
 		</div>
 </section>

@@ -10,11 +10,11 @@
 			</div>
 	</div>
 	-->
-	<div class="visible-xs mobile_menu" ng-click="showMenu()">
+	<div class="visible-xs mobile_menu" >
 		<div class="mobile-header-avatar inline vm m-r-20 cover " style="background-image:url('{{user.get('smoll_avatar')}}')" ></div>
 		<h4 class="text-white inline no-margin vm">{{user.get('first_name')}}</h4>
 		<h5 class="text-white inline no-margin text-danger vm">{{user.get('last_name')}}</h5>		
-		<div class="pull-right m-t-5">
+		<div class="pull-right m-t-5" ng-click="showMenu()">
 			<i class="fa fa-bars text-success"></i>
 		</div>
 	</div> 	
