@@ -8,6 +8,7 @@ angular.module('qrqApp', [
   'ui.bootstrap',
   'wu.masonry',
   'uiGmapgoogle-maps',
+  'ngFileUpload',
   'ngMap'
 ])
 .run(function($rootScope){
