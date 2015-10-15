@@ -4,31 +4,36 @@
 		<div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
 			<h3>Добавление Фото</h3>
 			
-				<div class="col-sm-6">
+				<div class="col-sm-6 m-b-30">
 					<form validate  class="" enctype="multipart/form-data">
-						<div class="input-group">
-							<input type="file" onchange="angular.element(this).scope().files(this)" ng-model="fileq">
+						<div class="input-group"> 
+							
+							<input id="file_picker" type="file" onchange="angular.element(this).scope().files(this)" ng-model="fileq">
 						</div>
+						<!--
 						<div class="input-group">
 							<label for="title">Title</label>
 							<input ng-model="newsadd.title" id="title" type="text" placeholder="Title" class="form-control" required>
 						</div>
+						-->
 						<div class="input-group">
 							<label for="text_news">Title</label>
 							<textarea ng-model="newsadd.text" type="text" placeholder="Text news" class="form-control" required></textarea>
 						</div>
 						<button type="submit" ng-click="update(user)" class="btn btn-primary">Сохранить</button> 
-						<pre>newsadd = {{newsadd | json}}</pre>
-					</form>
+						<!--<pre>newsadd = {{newsadd | json}}</pre>-->
+					</form> 
 				</div>
 
 				
 				
 
 				<div class="col-sm-6">
-					<img ng-show="newsadd.image.length > 0" src="{{newsadd.image}}" class="thumb">
-					<h5>{{user.get('username')}}</h5>
-					<h4>{{newsadd.title}}</h4>
+					<img ng-show="newsadd.image.length > 0" src="{{newsadd.image}}" class="full-width">
+					<h4>{{user.get('username')}}</h4>
+					<!--
+					<h5>{{newsadd.title}}</h5>
+					-->
 					<p>{{newsadd.text}}</p> 
 				</div>
 			

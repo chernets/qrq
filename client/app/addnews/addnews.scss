@@ -10,4 +10,12 @@ input {
     border-bottom: 2px solid $input_green;
 	border-radius: 0;
 }
+#file_picker {
+    background: $input_green;
+    box-sizing: border-box;
+    color: white;
+    padding: 10px;
+    text-align: center;
+	width:100%;
+} 
 }
