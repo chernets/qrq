@@ -17,6 +17,7 @@
     "lodash": "~2.4.1",
     "ngmap": "~1.13.4",
     "angular-google-maps": "~2.1.6",
+    "angularjs-geolocation": "*",
     "ng-file-upload": "~9.0.10"
   },
   "devDependencies": {
