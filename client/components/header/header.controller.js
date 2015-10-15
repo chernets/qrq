@@ -6,9 +6,8 @@ angular.module('qrqApp')
 	
 	$scope.user = Parse.User.current();
 	geolocation.getLocation().then(function(data){
-      /*$scope.coords = {lat:data.coords.latitude, long:data.coords.longitude};
-	  console.log(data);*/
-	  alert("lat:"+data.coords.latitude+" --- long:"+data.coords.longitude);
+      /*$scope.coords = {lat:data.coords.latitude, long:data.coords.longitude};*/
+	  console.log("lat:"+data.coords.latitude+" --- long:"+data.coords.longitude);
     });
 	$scope.showMenu = function(){
 		$rootScope.menu = !$rootScope.menu;
