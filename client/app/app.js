@@ -7,6 +7,7 @@ angular.module('qrqApp', [
   'ui.router',
   'ui.bootstrap',
   'wu.masonry',
+  'geolocation',
   'uiGmapgoogle-maps',
   'ngFileUpload',
   'ngMap'
