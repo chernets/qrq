@@ -31,6 +31,7 @@ angular.module('qrqApp')
 			UserPost.set("user_post_text", news_add.text);
 			UserPost.set("user_post_image", news_add.image);
 			UserPost.set("user_post_id", currentUser.id);
+			UserPost.set("user_post_likes", "0");
 			UserPost.save(null, {
 			  success: function(UserPost) {
 				alert('Все успешно кончилось');
