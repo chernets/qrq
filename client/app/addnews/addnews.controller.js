@@ -6,19 +6,22 @@ angular.module('qrqApp')
 	  
 	var currentUser = Parse.User.current();
 	
-	
-    $scope.files = function(element){
-        var photofile = element.files[0];
-        var reader = new FileReader();
-        reader.onload = function(e) {
-			$scope.$apply(function(scope) {
-				$scope.newsadd.image = e.target.result;
+		$scope.myImage='';
+		$scope.myCroppedImage='';
+
+		$scope.handleFileSelect = function(evt) {
+		  var file=evt.files[0];
+		  var reader = new FileReader();
+		  reader.onload = function (e) {
+			$scope.$apply(function($scope){
+				$scope.myImage=e.target.result;
+				$scope.newsadd.image = $scope.myCroppedImage;
 			});
-        };
-        reader.readAsDataURL(photofile);
-    };
+		  };
+		  reader.readAsDataURL(file);
+		};	
 	
-	  $scope.mainform = {};
+		$scope.mainform = {};
 		
       $scope.update = function(newsadd) {
         $scope.mainform = angular.copy(newsadd);
@@ -31,7 +34,7 @@ angular.module('qrqApp')
 			UserPost.set("user_post_text", news_add.text);
 			UserPost.set("user_post_image", news_add.image);
 			UserPost.set("user_post_id", currentUser.id);
-			UserPost.set("user_post_likes", "0");
+			UserPost.set("user_post_likes", 0);
 			UserPost.save(null, {
 			  success: function(UserPost) {
 				alert('Все успешно кончилось');
