@@ -7,8 +7,10 @@
 				<div class="col-sm-3 m-b-30">
 					<form validate  class="" enctype="multipart/form-data">
 						<div class="input-group"> 
-							
-							<input id="file_picker" type="file" onchange="angular.element(this).scope().files(this)" ng-model="fileq">
+							<input type="file" onchange="angular.element(this).scope().handleFileSelect(this)" id="fileInput" />
+							<div class="cropArea">
+								<img-crop image="myImage" area-min-size="200" result-image-format="image/jpeg" area-type="square" result-image-size="300" result-image="newsadd.image"></img-crop>
+							</div>
 						</div>
 						<!--
 						<div class="input-group">
@@ -38,7 +40,7 @@
 					<p>{{newsadd.text}}</p> 
 				</div>
 				<pre>
-					{{newsadd.image}}
+					{{newsadd}}
 				</pre>
 			
 		</div>

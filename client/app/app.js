@@ -10,6 +10,7 @@ angular.module('qrqApp', [
   'geolocation',
   'uiGmapgoogle-maps',
   'ngFileUpload',
+  'ngImgCrop',
   'ngMap'
 ])
 .run(function($rootScope){
