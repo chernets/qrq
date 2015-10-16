@@ -8,25 +8,7 @@
 						<map center="-34.397, 150.644" zoom="8"></map>
 					</div>
 					<div class="row m-t-15 m-b-15 bg-black">
-						<div class="col-sm-12 users_blocks no-padding relative clearfix" ng-class="{'active' : itm.show}" ng-click="itm.show=!itm.show" ng-repeat="(key, itm) in user" data-id="{{key}}">
-							<div class="overflow avatar_bloccer col-xs-3 p-t-5 p-b-5 bg-master-darkest">
-								<div class="cover small_users_det_photo" style="background-image:url({{itm.get('big_avatar')}})"></div>
-							</div>
-							<div class="text-white col-xs-9 p-t-5 p-b-5 changer bg-master-darkest">
-								<p class="no-margin"><i class="fa fa-user m-r-15 text-success"></i>{{itm.get('username')}}</p>
-								<p class="no-margin"><i class="fa fa-user m-r-15 text-success"></i>{{itm.get('gender')}}</p>
-								<small class="no-margin top-right hint-text p-t-5 p-r-15">1.1km</small>
-								<small ng-hide="itm.cheakFollows" class="no-margin bottom-right hint-text text-info p-r-15">Tap to follow</small>
-								<small ng-show="itm.cheakFollows" class="no-margin bottom-right hint-text text-success p-r-15">You R follow him</small>
-							</div>
-							<div class="hidden_user_button" ng-hide="itm.cheakFollows">
-								<button  ng-click="addFollow(itm.id)" class="btn btn-primary">+ Follow</button>
-							</div>
-							<div class="hidden_user_button " ng-show="itm.cheakFollows">
-								<button  ng-click="delFollow(itm.id)" class="btn btn-danger">- unFollow</button>
-							</div>
-						</div>
-						
+						<qrqusers userslimit="10"></qrqusers>
 					</div>
 				</div>
 			</div>

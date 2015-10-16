@@ -1,0 +1,13 @@
+<div class="col-sm-12">
+	<div class="gallery" masonry='{ "isFitWidth": true,"gutter": 10}'>
+		<div ng-repeat="(key, itm) in user_posts" class="masonry-brick gallery-item" ng-click="open(itm.id)" attr="{{itm.id}}">
+			<img class="full-width " alt="{{key}}" src="{{itm.get('user_post_image')}}"/>
+			<h4>{{itm.get('user_post_id')}}</h4>
+			<p>{{itm.get('user_post_text')}}</p>
+				<div class="bottom-right">
+					<i class="fa fa-eye m-r-5 m-l-5"></i>
+					<p class="inline no-margin ng-binding">{{itm.get('user_post_likes')}}</p>
+				</div> 
+		</div>
+	</div>
+</div>

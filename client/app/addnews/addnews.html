@@ -1,0 +1,47 @@
+<navbar class="hidden-xs"></navbar>
+<section class=" clearfix xs-no-padding">
+		<header></header>
+		<div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+			<h3>Добавление Фото</h3>
+			
+				<div class="col-sm-3 m-b-30">
+					<form validate  class="" enctype="multipart/form-data">
+						<div class="input-group"> 
+							<input type="file" onchange="angular.element(this).scope().handleFileSelect(this)" id="fileInput" />
+							<div class="cropArea">
+								<img-crop image="myImage" area-min-size="200" result-image-format="image/jpeg" area-type="square" result-image-size="300" result-image="newsadd.image"></img-crop>
+							</div>
+						</div>
+						<!--
+						<div class="input-group">
+							<label for="title">Title</label>
+							<input ng-model="newsadd.title" id="title" type="text" placeholder="Title" class="form-control" required>
+						</div>
+						-->
+						<div class="input-group">
+							<label for="text_news">Текст к Вашей новости</label>
+							<textarea ng-model="newsadd.text" type="text" placeholder="Text news" class="form-control" required></textarea>
+						</div>
+						<button type="button" ng-click="reset(form)" value="Reset" class="btn btn-danger">Очистить</button> 
+						<button type="submit" ng-click="update(user)" class="btn btn-primary">Сохранить</button> 
+						<!--<pre>newsadd = {{newsadd | json}}</pre>-->
+					</form> 
+				</div>
+
+				
+				
+
+				<div class="col-sm-3">
+					<img ng-show="newsadd.image.length > 0" src="{{newsadd.image}}" class="full-width">
+					<h4>{{user.get('username')}}</h4>
+					<!--
+					<h5>{{newsadd.title}}</h5>
+					-->
+					<p>{{newsadd.text}}</p> 
+				</div>
+				<pre>
+					{{newsadd}}
+				</pre>
+			
+		</div>
+</section>

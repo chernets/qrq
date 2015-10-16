@@ -7,7 +7,10 @@ angular.module('qrqApp', [
   'ui.router',
   'ui.bootstrap',
   'wu.masonry',
+  'geolocation',
   'uiGmapgoogle-maps',
+  'ngFileUpload',
+  'ngImgCrop',
   'ngMap'
 ])
 .run(function($rootScope){

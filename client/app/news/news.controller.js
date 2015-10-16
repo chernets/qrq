@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('qrqApp')
-  .controller('newsCtrl', function($scope, $http) {
-	
+  .controller('newsCtrl', function($scope, $http, $rootScope) {
+	$rootScope.menu = "news";
 	
 	$scope.loadNews = function(){
 		var query = new Parse.Query("news");

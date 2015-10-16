@@ -4,14 +4,17 @@
 <section class="<!--fixed_header--> clearfix xs-no-padding">
 		<header></header>
 		<div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20  ">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="col-sm-6 text-center" >
-						<div class="col-sm-6 near_quest" ng-repeat="(key, que) in n_quests">
-							<div class="cover relative" style="background-image:url('{{que.get('quest_big_photo')}}')">
-								<h3 class="text-white bottom-left p-l-15 ng-binding">{{que.get('quest_name')}} </h3>
+				<div class="row p-b-35">
+					<div class="col-sm-4" >
+						<h3>Ближащие квесты</h3>
+						<div class="near_quests clearfix" ng-repeat="(key, que) in n_quests">
+							<div class="col-sm-5 m-b-15 cover photo relative" style="background-image:url('{{que.get('quest_big_photo')}}')"></div>
+							<div class="col-sm-7 text-left">
+								<h4 class="no-margin">{{que.get('quest_name')}}</h3>
+								<p>{{que.get('quest_location')}}</p>
+								<p class="text-success">{{que.get('time_begin')}}</p>
+								<!--<p class="near_text">{{que.get('description')}}</p>-->
 							</div>
-							
 							
 						</div>
 						<!--
@@ -26,52 +29,46 @@
 						</div>
 						-->
 					</div>
+					<div class="col-sm-4 no-padding" >
+						<h3>Новые пользователи</h3>
+						<div class="m-t-15 m-b-15" >
+							<qrqusers userslimit="8" sortby="createdAt"></qrqusers>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<a href="/addnews" class="btn btn-primary">Добавить фото</a>
+					</div>
 				</div>
-			</div>
-			<div class="gallery" masonry='{ "isFitWidth": true,"gutter": 10}'>
-				<div ng-repeat="(key, itm) in news" class="gallery-item masonry-brick" data-width="1" data-height="1" ng-click="open(itm.id)" attr="{{itm.id}}">
-
-						
-						
-						
-						<div class="gallery-slider full-width full-height">
-							<div class="cover full-width full-height" alt="{{key}}" style="background-image:url('{{itm.get('photo_src')}}')"></div>
-						</div>
-						<div class="gallery-body pull-bottom full-width gradient-grey text-white padding-10">
-								<h3 class="elipsis no-margin nowrap">{{itm.get('title_news')}}</h3>
-								<p class="elipsis p-2-rows no-margin">{{itm.get('text_news')}}</p>
-						</div>
-						<div class="top-left text-success bold">
-							<i class="fa fa-eye m-r-5 m-l-5"></i>
-							<p class="inline no-margin">{{itm.get('views')}}</p>
-						</div>
-						<div class="top-right m-r-10 text-success">
-							<i class="fa fa-circle-o"></i>
-						</div>
-
-						
-					<script type="text/ng-template" id="news_detail_modal">
-						<div class="clearfix flex news_detail_modal">
-							<div class="col-sm-7 no-padding">	
-								<carousel class="gallery-slider full-width full-height" ng-swipe-left="next()" ng-swipe-right="prev()" ng-mouseleave="play()" ng-mouseenter="pause()" no-wrap="noWrapSlides" interval="5000">
-								  <slide ng-repeat="(key, img) in news_det.get('detail_photos')" >
-									<div class="cover full-width full-height news_det_sli" style="background-image:url('{{img.src}}')"></div>
-								  </slide>
-								</carousel>
-							</div>
-							<div class="col-sm-5">
-								<h3 class="text-danger">{{news_det.get('title_news')}}</h3>
-								<h4 class="hint-text">{{news_det.get('category')}}</h4>
-								<p>{{news_det.get('text_news')}}</p>
-								<button ng-click="cancel()" type="button" class="btn btn-primary m-b-15 pull-right">Закрити</button>
-							</div>
-						</div>
-					</script>
 				
+				
+				<div class="row p-b-35">
+					<div class="col-sm-6">
+						<h3>Последние новости</h3>
+						<div class="col-sm-6 m-b-15 no-padding">
+							<p class="inline">Сортировать по:</p>
+							<div class="btn-group ">
+								<button class="btn btn-primary">Все</button>
+								<button class="btn btn-primary">Новости</button>
+								<button class="btn btn-primary">Читать</button>
+								<button class="btn btn-primary">Фото</button>
+							</div>
+						</div>
+						<div class="col-sm-6 text-right m-b-15 no-padding">
+							<p class="inline">Показывать по:</p>
+							<div class="btn-group ">
+								<button class="btn btn-primary">5</button>
+								<button class="btn btn-primary">20</button>
+								<button class="btn btn-primary">50</button>
+							</div>
+						</div>
+						
+						<qrqgalery newslimit="10"></qrqgalery>
+					</div>
+					<div class="col-sm-6">
+						<h3>Последние посты</h3>
+						<qrqposts newslimit="10"></qrqposts>
+					</div> 
 				</div>
-			</div>
-			
-			
 		</div>
 </section>	
 <footer></footer>
