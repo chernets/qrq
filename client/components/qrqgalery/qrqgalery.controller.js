@@ -33,8 +33,8 @@ angular.module('qrqApp')
 								console.log(news_det);
 												var modalInstance = $modal.open({
 								  templateUrl: 'news_detail_modal',
-									 controller: 'MainCtrlModal',
-								  size: 'lg',
+								  controller: 'MainCtrlModal',
+								  size: 'lg_supa',
 									  resolve: {
 										news_det: function () {
 											console.log(news_det);

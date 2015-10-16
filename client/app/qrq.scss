@@ -1154,6 +1154,10 @@ p{
 	}
 	navbar.active {
 		left: 0 !important;
+		opacity:0.95;
+	}
+	navbar.active ~ section{
+		filter:blur(15px);
 	}
 }
 .news_detail_modal .carousel-inner {

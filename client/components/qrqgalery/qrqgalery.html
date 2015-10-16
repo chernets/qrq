@@ -16,15 +16,16 @@
 				</div>
 
 				<script type="text/ng-template" id="news_detail_modal">
-					<div class="clearfix bg-black news_detail_modal">
-						<div class="col-sm-12 no-padding">	
+					<div class="clearfix bg-black flex news_detail_modal">
+						<div class="col-sm-8 no-padding">	
 							<carousel class="gallery-slider full-width full-height" ng-swipe-left="next()" ng-swipe-right="prev()" ng-mouseleave="play()" ng-mouseenter="pause()" no-wrap="noWrapSlides" interval="5000">
-							  <slide ng-repeat="(key, img) in news_det.get('detail_photos')" >
-								<div class="cover full-width full-height news_det_sli" style="background-image:url('{{img.src}}')"></div>
+							  <slide class="news_det_sli" ng-repeat="(key, img) in news_det.get('detail_photos')" >
+								<div class="cover full-width full-height blur modal_lside" style="background-image:url('{{img.src}}')"></div>
+								<img src='{{img.src}}'/>
 							  </slide>
 							</carousel>
 						</div>
-						<div class="col-sm-12">
+						<div class="col-sm-4">
 							<h3 class="text-danger">{{news_det.get('title_news')}}</h3>
 							<h4 class="hint-text">{{news_det.get('category')}}</h4>
 							<p>{{news_det.get('text_news')}}</p>
