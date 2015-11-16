@@ -1,0 +1,28 @@
+.news_element {
+    background: white none repeat scroll 0 0;
+    box-sizing: border-box;
+    padding: 20px;
+	transition-delay: 1s;
+    transition-duration: 1s;
+    transition-property: all;
+    transition-timing-function: ease;
+	border-bottom: 1px solid $grey;
+	@media screen and (max-width: 800px) {
+		padding: 10px;
+	}
+}
+.news_det_phoho_item {
+    background-size: cover !important;
+    border-radius: 3px;
+    box-shadow: 3px 3px 10px black;
+    box-sizing: border-box;
+    float: left;
+    height: 200px;
+    margin: 15px;
+    position: relative;
+    width: 200px;
+}
+.news_det_phoho_elem {
+    float: left;
+    width: 25%;
+}

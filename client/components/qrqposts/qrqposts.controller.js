@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('qrqApp')
-  .controller('qrqpostsCtrl', function($scope,$modal, $http) {
+  .controller('qrqpostsCtrl', function($scope, $http) {
 	  
-	  
+
 	var limit = $scope.newslimit;
 	$scope.loadPosts = function(){
 		var query = new Parse.Query("User_Posts");

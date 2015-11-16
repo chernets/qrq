@@ -1100,7 +1100,7 @@ p span {
 	margin:0 !important;
 }
 .cover {
-    background-size: cover;
+    background-size: cover !important;
 }
 .w-100{
 	width:100px;
@@ -1142,24 +1142,7 @@ p{
     min-height: 300px;
     width: 100%;
 }
-@media screen and (min-width: 768px){
-	.flex{
-		display:flex;
-		-webkit-display:flex;
-	}
-}
-@media screen and (max-width: 768px){
-	navbar {
-		left: -200px !important;
-	}
-	navbar.active {
-		left: 0 !important;
-		opacity:0.95;
-	}
-	navbar.active ~ section{
-		filter:blur(15px);
-	}
-}
+
 .news_detail_modal .carousel-inner {
     height: 100%;
 }

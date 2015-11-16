@@ -1,0 +1,9 @@
+<div class="lockscreen" ng-class="{show_lockscreen:lockscreen_active}" ng-controller="LockscreenCtrl" >
+	<div class="lock_photo cover"
+	style="background:url(https://pp.vk.me/c543103/v543103166/79e7/-wn9H1R2Vhg.jpg)">
+		<div class="user_block">
+			<div class="lockscree_photo cover inline" style="background:url({{user.get('big_avatar')}})"></div>
+			<p class="lock_screen_name inline">{{user.get('username')}}</p>
+		</div>
+	</div>
+</div>

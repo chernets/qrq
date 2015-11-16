@@ -1,8 +1,8 @@
 
 <navbar ng-class={active:menu}></navbar>
-
+<header></header>
 <section class="<!--fixed_header--> clearfix xs-no-padding">
-		<header></header>
+		
 		<div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20  ">
 				<div class="row p-b-35">
 					<div class="col-sm-4" >
@@ -42,32 +42,16 @@
 				
 				
 				<div class="row p-b-35">
-					<div class="col-sm-6">
-						<h3>Последние новости</h3>
-						<div class="col-sm-6 m-b-15 no-padding">
-							<p class="inline">Сортировать по:</p>
-							<div class="btn-group ">
-								<button class="btn btn-primary">Все</button>
-								<button class="btn btn-primary">Новости</button>
-								<button class="btn btn-primary">Читать</button>
-								<button class="btn btn-primary">Фото</button>
-							</div>
-						</div>
-						<div class="col-sm-6 text-right m-b-15 no-padding">
-							<p class="inline">Показывать по:</p>
-							<div class="btn-group ">
-								<button class="btn btn-primary">5</button>
-								<button class="btn btn-primary">20</button>
-								<button class="btn btn-primary">50</button>
-							</div>
-						</div>
-						
-						<qrqgalery newslimit="20"></qrqgalery>
+					<div class="col-sm-12">
+						<h3>Последние новости</h3>					
+						<qrqgalery newslimit="10"></qrqgalery>
 					</div>
-					<div class="col-sm-6 ">
+				</div>
+				<div class="row">
+					
 						<h3>Последние посты</h3>
 						<qrqposts newslimit="20"></qrqposts> 
-					</div> 
+					 
 				</div>
 		</div>
 </section>	

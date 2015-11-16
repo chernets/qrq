@@ -4,16 +4,26 @@ angular.module('qrqApp')
   .controller('HeaderCtrl', function ($scope, $rootScope, geolocation) {
 
 	
-	$scope.user = Parse.User.current();
-	geolocation.getLocation().then(function(data){
-      /*$scope.coords = {lat:data.coords.latitude, long:data.coords.longitude};*/
-	  console.log("lat:"+data.coords.latitude+" --- long:"+data.coords.longitude);
-    });
+	var point;
+	
+	/*geolocation.getLocation().then(function(data){
+	  $scope.usergeopoint = [data.coords.latitude,data.coords.longitude];
+	  
+	  var user_geo = Parse.User.current();
+
+	  if(user_geo){
+		  point = new Parse.GeoPoint({latitude: data.coords.latitude, longitude: data.coords.longitude});
+		  user_geo.set("my_position", point);
+		  user_geo.save();
+	  }
+    });*/
 	$scope.showMenu = function(){
 		$rootScope.menu = !$rootScope.menu;
 		return $rootScope.menu;
 	}
 	
+	
+	$scope.user = Parse.User.current();
 	$scope.login = function(){
 		Parse.FacebookUtils.logIn("public_profile,user_friends,user_likes,email,user_about_me", {
 			success: function(user) {

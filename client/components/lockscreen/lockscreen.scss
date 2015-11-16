@@ -1,0 +1,41 @@
+.lockscreen {
+    background-size: cover !important;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+		&.show_lockscreen {
+			display: block;
+		}
+		.lock_photo{
+			background-size: cover !important;
+			height: 100%;
+			width: 100%;
+		}
+		.lockscree_photo {
+			background-size: cover !important;
+			border: 5px solid gray;
+			border-radius: 50%;
+			height: 180px;
+			width: 180px;
+		}
+		.lock_screen_name {
+			color: white;
+			font-size: 40px;
+			vertical-align: bottom;
+		}
+		.user_block {
+			border: 0 none;
+			bottom: 0;
+			height: 300px;
+			left: 0;
+			margin: auto;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 350px;
+		}
+}

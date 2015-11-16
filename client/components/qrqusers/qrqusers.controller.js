@@ -23,7 +23,7 @@ angular.module('qrqApp')
 					results[i].cheakFollows = $scope.cheakFollow(results[i].id);
 				}
 				$scope.$apply(function() {
-					$scope.user = results;
+					$scope.qrqusers = results;
 				});
 			},
 			error: function(error) {

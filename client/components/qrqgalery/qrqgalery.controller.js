@@ -1,27 +1,36 @@
 'use strict';
 
 angular.module('qrqApp')
-  .controller('qrqgaleryCtrl', function($scope,$modal, $http) {
+  .controller('qrqgaleryCtrl', function($scope,$modal, $http,$rootScope) {
 	  
-	  
+	var skip = 0;
 	var limit = $scope.newslimit;
-	$scope.loadNews = function(){
+	$scope.news = [];
+	$scope.loadNews = function(i){
 		var query = new Parse.Query("news");
 		query.descending("createdAt");
 		query.limit(limit);
+		query.skip(skip);
 		query.find({
 			success: function(results) {
-				$scope.$apply(function() {
-					$scope.news = results;
-				});
+				for(var i =0; i<results.length; i++){
+					$scope.news.push(results[i])
+				}								
 			},
 			error: function(error) {
 				console.log(error);
 			}
 		});
 	}
+
 	$scope.loadNews();
 	
+	$scope.getMoreNews = function(){
+		skip += limit;
+		console.log(skip);
+		$scope.loadNews(skip);
+		
+	}
 	
 	// detail modal
     $scope.open = function(itm){

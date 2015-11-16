@@ -1,0 +1,31 @@
+<navbar class="hidden-xs"></navbar>
+<section class=" clearfix xs-no-padding">
+		<header></header>
+		<div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+			<div class="row">
+				<div class="col-sm-9">
+					<div class="row cover" style="background:url({{user_pade_ids.get('cover_big_photo')}})repeat scroll 0 0 / cover ">
+						<img src="{{user_pade_ids.get('big_avatar')}}"/>
+					</div>
+					<div class="panel">
+						<div class="panel-body">
+							<p>{{user_pade_ids.get('username')}}</p>
+							<a href="{{user_pade_ids.get('link_site')}}" ng-if="user_pade_ids.get('link_site') != null">My Facebook account</a>
+							<p>{{user_pade_ids.get('gender')}}</p>
+							<a href="mailto:{{user_pade_ids.get('email')}}" ng-if="user_pade_ids.get('email') != null">Write me</a>
+						</div>
+						<div class="panel-footer no-padding">
+							<div>
+								<map center="{{user_pade_ids.get('my_position').latitude}} , {{user_pade_ids.get('my_position').longitude}}" zoom="15">
+									<marker position="{{user_pade_ids.get('my_position').latitude}} , {{user_pade_ids.get('my_position').longitude}}"></marker>
+								</map>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<qrqfriends9></qrqfriends9>
+				</div>
+			</div>
+		</div>
+</section>

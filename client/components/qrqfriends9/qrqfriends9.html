@@ -1,0 +1,6 @@
+<div class="row clearfix">
+	<a ng-repeat="(key,itm) in qrqfriends9 | limitTo:8" href="/userpage?id={{itm.id}}"  class="col-sm-4 cover qrq9 " style="background-image:url({{itm.get('big_avatar')}})">	</a>
+	<div class="col-sm-4 qrq9 qrq9text text-center bg-primary no-padding">
+		<p class=""><b>{{qrqfriends9.length}}</b><br>Followers</p>
+	</div>
+</div>

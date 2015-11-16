@@ -1,20 +1,73 @@
-<div class="col-sm-12">
-	<div class="gallery" masonry='{ "isFitWidth": true,"gutter": 10}'>
-		<div ng-repeat="(key, itm) in news" class="masonry-brick gallery-item" ng-click="open(itm.id)" attr="{{itm.id}}">
-		
-				<img class="full-width " alt="{{key}}" src="{{itm.get('photo_src')}}"/>
-				<div class="gallery-body pull-bottom full-width gradient-grey text-white padding-10">
-						<h3 class="elipsis no-margin nowrap">{{itm.get('title_news')}}</h3>
-						<p class="elipsis p-2-rows no-margin">{{itm.get('text_news')}}</p>
+<div class="row">
+	<div class="col-sm-6 m-b-15 no-padding">
+		<p class="inline">Сортировать по:</p>
+		<div class="btn-group ">
+			<button class="btn btn-primary">Все</button>
+			<button class="btn btn-primary">Новости</button>
+			<button class="btn btn-primary">Читать</button>
+			<button class="btn btn-primary">Фото</button>
+		</div>
+	</div>
+	<div class="col-sm-6 text-right m-b-15 no-padding">
+		<p class="inline">Показывать по:</p>
+		<div class="btn-group ">
+			<button class="btn btn-primary">5</button>
+			<button class="btn btn-primary">20</button>
+			<button class="btn btn-primary">50</button>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="news_block clearfix">
+		<div ng-repeat="(key, itm) in news"  class="news_element clearfix" ng-click="open(itm.id)" attr="{{itm.id}}" adaptive-background  ab-image-class="the-chosen-one">
+				<img class="the-chosen-one hide" src="{{itm.get('photo_src')}}" />
+				
+			<!--
+			<div class="clearfix" ng-if="itm.get('detail_photos') == null">
+				<div class="col-sm-3">
+					<img class="full-width" src="{{itm.get('photo_src')}}"/>
 				</div>
-				<div class="top-left text-success bold">
-					<i class="fa fa-eye m-r-5 m-l-5"></i>
-					<p class="inline no-margin">{{itm.get('views')}}</p>
+				<div class="col-sm-9">
+					<h3>{{itm.get('title_news')}}</h3>
+					<p class="no-margin"><i class="fa fa-camera m-r-10"></i>{{itm.get('detail_photos').length}}</p>
+					<b>Photos</b>
+					<p>{{itm.get('text_news')}}</p>
 				</div>
-				<div class="top-right m-r-10 text-success">
-					<i class="fa fa-circle-o"></i>
+			</div>
+			-->
+			<div class="clearfix">
+				<div class="col-sm-5" ng-class="$even ? '' : 'pull-right'">
+					<div class="row">
+						<div class="col-sm-10">
+							<h3>{{itm.get('title_news')}}</h3>
+						</div>
+						<div class="col-sm-2 no-padding text-center">
+							<p class="no-margin"><i class="fa fa-camera m-r-10"></i>{{itm.get('detail_photos').length}}</p>
+							<b>Photos</b>
+						</div>
+					</div>
+					<p>{{itm.get('text_news')}}</p>
+					<div class="">
+						<p>{{itm.get('views')}}<i class="fa fa-eye m-l-10"></i></p>
+					</div>
+					
 				</div>
 
+				<div class="col-sm-7" ng-if="itm.get('detail_photos') != null">
+						<div class="news_det_photo clearfix overflow"  >
+							<div class="news_det_phoho_elem" ng-repeat="(key, imgz) in itm.get('detail_photos') | limitTo:4" >
+								<div class="news_det_phoho_item" style="z-index:{{itm.get('detail_photos').length - key}};background:url('{{imgz.src}}')" alt="{{key}}"></div>
+							</div>
+						</div>
+				</div>
+				<div class="col-sm-7" ng-if="itm.get('detail_photos') == null">
+						<div class="news_det_photo clearfix overflow"  >
+							<div class="news_det_phoho_elem">
+								<div class="news_det_phoho_item" style="background:url('{{itm.get('photo_src')}}')"></div>
+							</div>
+						</div>
+				</div>
+			</div>
 				<script type="text/ng-template" id="news_detail_modal">
 					<div class="clearfix bg-black flex news_detail_modal">
 						<div class="col-sm-8 no-padding">	
@@ -33,6 +86,25 @@
 						</div>
 					</div>
 				</script>
+		<!--
+				<img class="full-width " alt="{{key}}" src="{{itm.get('photo_src')}}"/>
+				<div class="gallery-body pull-bottom full-width gradient-grey text-white padding-10">
+						<h3 class="elipsis no-margin nowrap">{{itm.get('title_news')}}</h3>
+						<p class="elipsis p-2-rows no-margin">{{itm.get('text_news')}}</p>
+				</div>
+				<div class="top-left text-success bold">
+					<i class="fa fa-eye m-r-5 m-l-5"></i>
+					<p class="inline no-margin">{{itm.get('views')}}</p>
+				</div>
+				<div class="top-right m-r-10 text-success">
+					<i class="fa fa-circle-o"></i>
+				</div>
+
+
 		</div>
+		-->
+	</div>
+	<div class="">
+		<button class="btn btn-primary full-width bg-black padding-15" ng-click="getMoreNews()">Get more</button>
 	</div>
 </div>

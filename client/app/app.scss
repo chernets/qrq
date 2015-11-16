@@ -17,9 +17,15 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import 'main/main.scss';
 @import 'news/news.scss';
 @import 'qrq.scss';
+@import 'quests/quests.scss';
 @import 'style.scss';
+@import 'userpage/userpage.scss';
 @import 'users/users.scss';
 @import '../components/footer/footer.scss';
 @import '../components/header/header.scss';
+@import '../components/lockscreen/lockscreen.scss';
 @import '../components/modal/modal.scss';
+@import '../components/qrqfriends9/qrqfriends9.scss';
+@import '../components/qrqgalery/qrqgalery.scss';
+@import '../components/qrqposts/qrqpost.scss';
 // endinjector

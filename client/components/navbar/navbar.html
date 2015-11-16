@@ -1,5 +1,7 @@
-<aside ng-controller="NavbarCtrl">
-	<div class="">
+<aside ng-controller="NavbarCtrl" class="hidden-xs">
+	<div class="logo_block">
+		<p class="logo">QRQ</p>
+	</div>
 		<div class="user_nav_block cover" style="background-image:url('{{user.get('cover_big_photo')}}')">
 			<div class="nav_avatar cover" style="background-image:url('{{user.get('smoll_avatar')}}')">
 			</div>
@@ -8,18 +10,24 @@
 				<h5 class="no-margin text-white">{{user.get('last_name')}}</h5>
 			</div>
 		</div>
-	</div>
+	
 
 	<nav class="main_menu">
 		<li><a ng-class="{'menu_active': menu == '/'}" href="/">Главная</a></li>
-		<li><a ng-class="{'menu_active': menu == ''}">Карта<span><i class="fa fa-windows text-white"></i></span></a></li>
-		<li><a ng-class="{'menu_active': menu == ''}">Точки<span><i class="fa fa-map-signs"></i></span></a></li>
-		<li><a ng-class="{'menu_active': menu == ''}">Квести<span><i class="fa fa-map-o"></i></span></a></li>
-		<li><a ng-class="{'menu_active': menu == ''}">Про Нас<span><i class="fa fa-home"></i></span></a></li>
-		<li><a ng-class="{'menu_active': menu == 'news'}" href="/news">Новини<span><i class="fa fa-newspaper-o"></i></span></a></li>
-		<li><a ng-class="{'menu_active': menu == 'users'}" href="/users">Користувачі<span><i class="fa fa-newspaper-o"></i></span></a></li>
-		<li><a ng-show="user == null" ng-click="login()">login</a></li>
-		<li><a ng-show="user != null" ng-click="logout()">logout</a></li>
-		
+		<li><a><i class="fa fa-windows text-white m-r-15"></i>Карта</a></li>
+		<li><a><i class="fa fa-map-signs m-r-15"></i>Точки</a></li>
+		<li><a ng-class="{'menu_active': menu == 'quests'}" href="/quests"><i class="fa fa-map-o m-r-15"></i>Квести</a></li>
+		<li><a><i class="fa fa-home m-r-15"></i>Про Нас</a></li>
+		<li><a ng-class="{'menu_active': menu == 'news'}" href="/news"><i class="fa fa-newspaper-o m-r-15"></i>Новини</a></li>
+		<li><a ng-class="{'menu_active': menu == 'users'}" href="/users"><i class="fa fa-users m-r-15"></i></i>Користувачі</a></li>
+		<!--<li><a ng-show="user == null" ng-click="login()"><i class="fa fa-sign-in m-r-15"></i>login</a></li>
+		<li><a  ng-click="logout()"><i class="fa fa-sign-out m-r-15"></i>logout</a></li>-->
 	</nav>
+	<div class="navbar-footer clearfix">
+		<a><i class="fa fa-cog"></i></a>
+		<a><i ng-click="goFullscreen()" class="fa fa-arrows-alt"></i></a>
+		<a><i class="fa fa-lock"></i></a>
+		<a ng-show="user == null" ng-click="login()"><i class="fa fa-sign-in"></i></a>
+		<a ng-show="user != null" ng-click="logout()"><i class="fa fa-sign-out"></i></a>
+	</div>
 </aside>

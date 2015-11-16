@@ -11,13 +11,22 @@ angular.module('qrqApp', [
   'uiGmapgoogle-maps',
   'ngFileUpload',
   'ngImgCrop',
-  'ngMap'
+  'ngMap',
+  'FBAngular',
+  'mb-adaptive-backgrounds'
 ])
 .run(function($rootScope){
 	$rootScope.menu = false;
 })
-.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+.config(function($stateProvider, $urlRouterProvider, $locationProvider,adaptiveBackgroundsOptionsProvider) {
 	$urlRouterProvider
 	  .otherwise('/');
 	$locationProvider.html5Mode(true);
+	
+	  adaptiveBackgroundsOptionsProvider.set({
+		lightClass: 'adb-white',
+		darkClass: 'adb-dark',
+		imageClass: 'the-chosen-one'
+	  });
+	
 });
