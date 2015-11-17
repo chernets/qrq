@@ -1,13 +1,15 @@
 
 <navbar class="hidden-xs"></navbar>
-
+<header></header>
 <section class="fixed_header clearfix xs-no-padding">
-		<header></header>
+		
 		<div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
-			<div class="row bg-master-darkest">
+			<div class="row">
 				<div class="col-sm-6">
 					<div class="row">
-						<map center="-34.397, 150.644" zoom="8"></map>
+						<map center="48.67606761,26.57449543" zoom="15">
+							<marker title="{{itms.get('name')}}"  ng-repeat="(key, itms) in qpa_elem" position="{{itms.get('geopoints').latitude}} , {{itms.get('geopoints').longitude}}"></marker>
+						</map> 
 					</div>
 					<div class="row">
 						<div class="col-sm-5">
@@ -23,8 +25,8 @@
 							<i class="fa fa-bars text-success m-l-20"></i>
 						</div>
 					</div>
-					<div class="plane" masonry>
-						<div class="plane-item full-widht clearfix masonry-brick" ng-repeat="(key, itm) in user" data-id="{{key}}">
+					<div class="plane" >
+						<div class="plane-item full-widht clearfix" ng-repeat="(key, itm) in active_quest_user" data-id="{{key}}">
 							<div class="plane-number inline"><p class="no-margin">{{key}}<span class="m-l-5">st</span></p></div>
 							<div class="plane-info inline ">
 								<p class="no-margin"><i class="fa fa-user m-r-15 text-success"></i>{{itm.get('username')}}</p>
@@ -40,10 +42,13 @@
 					<h4>{{one_quest_info.get('description')}}</h4>
 					<p>{{one_quest_info.get('quest_active')}}</p>
 					<table class="full-width">
-						<tr ng-repeat="(key, q_item) in one_quest_info.get('points_of_quest')">
-							<td>{{key}}</td>
-							<td>{{q_item}}</td>
-							<td><qrcode data="http://example.com" href="http://example.com"></qrcode></td>
+						<tr ng-repeat="(key, q_item) in qpa_elem">
+							<td>{{q_item.get('altitude')}}</td>
+							<td>{{q_item.get('geopoints').latitude}}</td>
+							<td>{{q_item.get('geopoints').longitude}}</td>
+							<td>{{q_item.get('discription')}}</td>
+							<td>{{q_item.get('name')}}</td>
+							<td>{{q_item.get('objectId')}}</td>
 						</tr>
 					</table>
 				</div>

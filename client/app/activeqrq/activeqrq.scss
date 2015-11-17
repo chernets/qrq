@@ -1,0 +1,39 @@
+
+.plane-number {
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    width: 80px;
+}
+.plane-info {
+    color: white;
+    font-size: 14px;
+    height: 100%;
+    padding: 5px 20px;
+    vertical-align: middle;
+    width: calc(100% - 84px);
+}
+.plane {
+    position: relative;
+    width: 100%;
+}
+.plane-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: auto;
+    overflow: hidden;
+	width: 100%;
+	background:#000;
+    transition: all 0.3s ease 0s !important;
+}
+.plane-item:hover {
+    background: black none repeat scroll 0 0;
+    height: auto;
+    left: 5px !important;
+    z-index: 2;
+}
+.plane-info span {
+    padding-left: 10px;
+}
+.plane-item:hover .hide {
+    display: block !important;
+}

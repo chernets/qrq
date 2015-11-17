@@ -19,8 +19,7 @@
 </div>
 <div class="row">
 	<div class="news_block clearfix">
-		<div ng-repeat="(key, itm) in news"  class="news_element clearfix" ng-click="open(itm.id)" attr="{{itm.id}}" adaptive-background  ab-image-class="the-chosen-one">
-				<img class="the-chosen-one hide" src="{{itm.get('photo_src')}}" />
+		<div ng-repeat="(key, itm) in news"  class="news_element clearfix" ng-click="open(itm.id)" attr="{{itm.id}}" >
 				
 			<!--
 			<div class="clearfix" ng-if="itm.get('detail_photos') == null">
@@ -35,7 +34,8 @@
 				</div>
 			</div>
 			-->
-			<div class="clearfix">
+			<div class="clearfix" adaptive-background  ab-image-class="the-chosen-one">
+			<img class="the-chosen-one hide" src="{{itm.get('photo_src')}}" />
 				<div class="col-sm-5" ng-class="$even ? '' : 'pull-right'">
 					<div class="row">
 						<div class="col-sm-10">
@@ -60,6 +60,7 @@
 							</div>
 						</div>
 				</div>
+
 				<div class="col-sm-7" ng-if="itm.get('detail_photos') == null">
 						<div class="news_det_photo clearfix overflow"  >
 							<div class="news_det_phoho_elem">
@@ -67,10 +68,11 @@
 							</div>
 						</div>
 				</div>
+
 			</div>
 				<script type="text/ng-template" id="news_detail_modal">
 					<div class="clearfix bg-black flex news_detail_modal">
-						<div class="col-sm-8 no-padding">	
+						<div class="col-sm-8 no-padding full-height">	
 							<carousel class="gallery-slider full-width full-height" ng-swipe-left="next()" ng-swipe-right="prev()" ng-mouseleave="play()" ng-mouseenter="pause()" no-wrap="noWrapSlides" interval="5000">
 							  <slide class="news_det_sli" ng-repeat="(key, img) in news_det.get('detail_photos')" >
 								<div class="cover full-width full-height blur modal_lside" style="background-image:url('{{img.src}}')"></div>

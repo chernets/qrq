@@ -181,10 +181,10 @@ aside nav span i {
 .user_nav_block {
     background-size: cover;
     box-sizing: border-box;
+    display: block;
     height: 150px;
-    margin-bottom: 40px;
+    position: relative;
     width: 100%;
-	position:relative;
 }
 .nav_avatar {
     border: 2px solid #10cfbd;
@@ -260,58 +260,6 @@ section {
 }
 .gallery {
     margin: 40px auto;
-}
-.plane-number {
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    width: 80px;
-}
-.plane-info {
-    color: white;
-    font-size: 14px;
-    height: 100%;
-    padding: 5px 20px;
-    vertical-align: middle;
-    width: calc(100% - 84px);
-}
-.plane {
-    position: relative;
-    width: 100%;
-}
-.plane-item {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    height: 30px;
-    overflow: hidden;
-	width: 100%;
-    transition: all 0.3s ease 0s !important;
-}
-.plane-item:hover {
-    background: black none repeat scroll 0 0;
-    height: auto;
-    left: 5px !important;
-    z-index: 2;
-}
-.plane-item:nth-child(1) {
-    background: #1bc98e none repeat scroll 0 0;
-    border-color: #1bc98e;
-    text-shadow: 1px 1px 3px black;
-}
-.plane-item:nth-child(2) {
-    background: #a94442 none repeat scroll 0 0;
-    border-color: #a94442;
-    text-shadow: 1px 1px 3px black;
-}
-.plane-item:nth-child(3) {
-    background: #8a6d3b none repeat scroll 0 0;
-    border-color: #8a6d3b;
-    text-shadow: 1px 1px 3px black;
-}
-.plane-info span {
-    padding-left: 10px;
-}
-.plane-item:hover .hide {
-    display: block !important;
 }
 @media screen and (max-width: 768px) {
 	.xs-no-padding{
