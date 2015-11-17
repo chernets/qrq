@@ -19,23 +19,10 @@
 </div>
 <div class="row">
 	<div class="news_block clearfix">
-		<div ng-repeat="(key, itm) in news"  class="news_element clearfix" ng-click="open(itm.id)" attr="{{itm.id}}" >
-				
-			<!--
-			<div class="clearfix" ng-if="itm.get('detail_photos') == null">
-				<div class="col-sm-3">
-					<img class="full-width" src="{{itm.get('photo_src')}}"/>
-				</div>
-				<div class="col-sm-9">
-					<h3>{{itm.get('title_news')}}</h3>
-					<p class="no-margin"><i class="fa fa-camera m-r-10"></i>{{itm.get('detail_photos').length}}</p>
-					<b>Photos</b>
-					<p>{{itm.get('text_news')}}</p>
-				</div>
-			</div>
-			-->
-			<div class="clearfix" adaptive-background  ab-image-class="the-chosen-one">
-			<img class="the-chosen-one hide" src="{{itm.get('photo_src')}}" />
+		<div ng-repeat="(key, itm) in news"  class="news_element clearfix" ng-click="open(itm.id)" attr="{{itm.id}}" adaptive-background  ab-image-class="the-chosen-one">
+				<img class="the-chosen-one hide" src="{{itm.get('photo_src')}}" />
+			<div class="clearfix" >
+			
 				<div class="col-sm-5" ng-class="$even ? '' : 'pull-right'">
 					<div class="row">
 						<div class="col-sm-10">
