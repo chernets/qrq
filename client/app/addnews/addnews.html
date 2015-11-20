@@ -9,7 +9,7 @@
 						<div class="input-group"> 
 							<input type="file" onchange="angular.element(this).scope().handleFileSelect(this)" id="fileInput" />
 							<div class="cropArea">
-								<img-crop image="myImage" area-min-size="300" result-image-format="image/jpeg" area-type="square" result-image-size="500" result-image="newsadd.image"></img-crop>
+								<img-crop image="myImage" area-min-size="400" result-image-format="image/jpeg" area-type="square" result-image-size="1000" result-image="newsadd.image"></img-crop>
 							</div>
 						</div>
 						<!--
@@ -24,24 +24,30 @@
 						</div>
 						<button type="button" ng-click="reset(form)" value="Reset" class="btn btn-danger">Очистить</button> 
 						<button type="submit" ng-click="update(user)" class="btn btn-primary">Сохранить</button> 
-						<!--<pre>newsadd = {{newsadd | json}}</pre>-->
 					</form> 
 				</div>
 
 				
-				
-
-				<div class="col-sm-3"> 
+				<div class="gallery-item col-sm-3" adaptive-background>
+					<div class="post_header clearfix">
+						<div class="post_author" style="background-image:url('https://scontent.xx.fbcdn.net/hprofile-xlt1/v/t1.0-1/p50x50/11951946_842941295813740_3737236020154671941_n.jpg?oh=49b124fe0daa4212b15531c1fdff083e&oe=569970DC')">
+							
+						</div>
+						<div class="pull-left">
+							<b>{{user.get('username')}}</b>
+							<p class="text-black"><i class="fa fa-map-marker m-r-15"></i>Kyiv,novoz</p>
+						</div>
+						<div class="clearfix"></div>
+						<p class="post_text">{{newsadd.text}}</p>
+					</div>
 					<img ng-show="newsadd.image.length > 0" src="{{newsadd.image}}" class="full-width">
-					<h4>{{user.get('username')}}</h4>
-					<!--
-					<h5>{{newsadd.title}}</h5>
-					-->
-					<p>{{newsadd.text}}</p> 
+
+						<div class="post_bottom clearfix">
+							<div class="post-bot"><a href=""><i class="fa fa-heart"></i>0</a></div>
+							<div class="post-bot"><a><i class="fa fa-comments-o"></i>Comments</a></div>
+							<div class="post-bot"><a><i class="fa fa-share-alt"></i>Share</a></div>
+						</div> 
 				</div>
-				<pre>
-					{{newsadd}}
-				</pre>
 			
 		</div>
 </section>

@@ -77,10 +77,15 @@
 		width: 100%;
 	}
 }
-
 .gallery-item:nth-child(5n+6) {
 	    width: 500px;
 }
+@media only screen and (max-width: 500px) {
+	.gallery-item{
+			width: 100% !important;
+	}
+}
+
 
 .adb-dark {
 	p {

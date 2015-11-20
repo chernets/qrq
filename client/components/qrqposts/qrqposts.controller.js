@@ -5,10 +5,12 @@ angular.module('qrqApp')
 	  
 
 	var limit = $scope.newslimit;
+
 	$scope.loadPosts = function(){
 		var query = new Parse.Query("User_Posts");
 		query.descending("createdAt");
 		query.limit(limit);
+		query.include("user_post_owner");
 		query.find({
 			success: function(results) {
 				$scope.$apply(function() {

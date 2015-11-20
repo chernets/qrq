@@ -5,6 +5,7 @@ angular.module('qrqApp')
 	  
 	  
 	var currentUser = Parse.User.current();
+	var name = "image";
 	
 		$scope.myImage='';
 		$scope.myCroppedImage='';
@@ -32,8 +33,34 @@ angular.module('qrqApp')
 
 			var UserPost = new Post();
 			UserPost.set("user_post_text", news_add.text);
-			UserPost.set("user_post_image", news_add.image);
-			UserPost.set("user_post_id", currentUser.id);
+			
+			
+			var parseFile = new Parse.File(name, { base64:news_add.image} , "image/png");
+			UserPost.set("user_post_file", parseFile);
+			
+			
+			
+			UserPost.set("user_post_owner", currentUser);
+			/*var relation = UserPost.relation("user_post_owner");
+			console.log(currentUser.id);
+			relation.add("JOlJkVieh9");
+			*/
+			
+			
+			/* Подмена пользователя
+			var query = new Parse.Query(Parse.User);
+			query.equalTo("objectId", "RoFr0DzpTI");  // find all the women
+			query.find({
+			  success: function(etot) {
+				relation.add(etot);
+			  }
+			});
+			*/
+			
+
+			
+			
+			
 			UserPost.set("user_post_likes", 0);
 			UserPost.save(null, {
 			  success: function(UserPost) {
