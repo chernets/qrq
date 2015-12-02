@@ -1,0 +1,19 @@
+header {
+    background: #1d252d none repeat scroll 0 0;
+    border-bottom: 1px solid #232730;
+    box-sizing: border-box;
+    padding-left: 240px;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+	.navbar{
+		margin:0;
+		border:0 none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	header {
+		padding-left:0px;
+	}
+}

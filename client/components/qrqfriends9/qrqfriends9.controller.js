@@ -7,12 +7,10 @@ angular.module('qrqApp')
 	var folli;
 	
 	if($stateParams.id){
-		console.log("no " + $stateParams.id);
 		userpage_id = $stateParams.id;
 	}else{
 		
 		userpage_id = user_page_me.id;
-		console.log("yes " + user_page_me.id);
 	}
 	console.log(userpage_id);
 	$scope.UserFriends = function(){

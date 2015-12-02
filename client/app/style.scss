@@ -40,18 +40,7 @@ p {
 h1,h2,h3,h4,h5{
 	color: $light_black;
 }
-header {
-    background: #1d252d none repeat scroll 0 0;
-    border-bottom: 1px solid #232730;
-    box-sizing: border-box;
-    /*padding: 5px;
-	height: 60px;
-    position: fixed;*/
-    top: 0;
-    width: 100%;
 
-    z-index: 4;
-}
 /* Леваое меню */
 aside {
     background: $light_grey none repeat scroll 0 0;
@@ -261,6 +250,9 @@ section {
 .gallery {
     margin: 40px auto;
 }
+.xs-visible{
+	display:none;
+}
 @media screen and (max-width: 768px) {
 	.xs-no-padding{
 		padding:0;
@@ -268,6 +260,9 @@ section {
 	.fixed_header header {
 		height: auto;
 		padding: 10px 20px;
+	}
+	.xs-visible{
+		display:block;
 	}
 }
 .mobile-header-avatar {

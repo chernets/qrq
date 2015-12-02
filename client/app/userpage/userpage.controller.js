@@ -6,6 +6,8 @@ angular.module('qrqApp')
 	  $state.params;
 	  $stateParams; 
 	  var userpage_id;
+	  $scope.userpage_id_news = $stateParams.id;
+	  
 	  
 	  var user_page_me_now = Parse.User.current();
 	if($stateParams.id){

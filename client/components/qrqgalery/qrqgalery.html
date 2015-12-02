@@ -20,8 +20,26 @@
 <div class="row">
 	<div class="news_block clearfix">
 		<div ng-repeat="(key, itm) in news"  class="news_element clearfix" ng-click="open(itm.id)" attr="{{itm.id}}" adaptive-background  ab-image-class="the-chosen-one">
-				<img class="the-chosen-one hide" src="{{itm.get('photo_src')}}" />
-			<div class="clearfix" >
+			<img class="the-chosen-one hide" src="{{itm.get('photo_src')}}" />
+			
+			<!--
+			<div class="clearfix cover" ng-if="key == 0" style="background:url('{{itm.get('photo_src')}}')">
+				<div class="col-sm-6">
+					<h3>{{itm.get('title_news')}}</h3>
+					<p class="no-margin"><i class="fa fa-camera m-r-10"></i>{{itm.get('detail_photos').length}}</p>
+					<b>Photos</b>
+					<p>{{itm.get('text_news')}}</p>
+					<p>{{itm.get('views')}}<i class="fa fa-eye m-l-10"></i></p>
+				</div>
+				<div class="col-sm-6 i-new pull-right no-padding">
+					<div class="i-100-100" ng-repeat="(key, imgz) in itm.get('detail_photos') | limitTo:8"style="background:url('{{imgz.src}}')"></div>
+					<div class="i-100-100 bg-primary">
+						<p ><i class="fa fa-camera m-r-10"></i>{{itm.get('detail_photos').length}}</p>
+					</div>
+				</div>
+			</div>
+			-->
+			<div class="clearfix padding-20">
 			
 				<div class="col-sm-5" ng-class="$even ? '' : 'pull-right'">
 					<div class="row">
@@ -57,6 +75,7 @@
 				</div>
 
 			</div>
+			<!--
 				<script type="text/ng-template" id="news_detail_modal">
 					<div class="clearfix bg-black flex news_detail_modal">
 						<div class="col-sm-8 no-padding full-height">	

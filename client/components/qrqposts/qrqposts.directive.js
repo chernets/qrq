@@ -7,8 +7,8 @@ angular.module('qrqApp')
       restrict: 'E',
       controller: 'qrqpostsCtrl',
 	  scope: {
-		  newslimit : "=newslimit"/*,
-		  sortby : "@sortby"*/
+		  newslimit : "=newslimit",
+		  qrquserposts : "=qrquserposts"
 	  }
     };
   });

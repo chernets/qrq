@@ -9,6 +9,7 @@ angular.module('qrqApp')
 	$scope.loadNews = function(i){
 		var query = new Parse.Query("news");
 		query.descending("createdAt");
+		query.include("autor_of_news");
 		query.limit(limit);
 		query.skip(skip);
 		query.find({
