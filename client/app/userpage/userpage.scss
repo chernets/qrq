@@ -1,0 +1,44 @@
+.my_first_name {
+    background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+    color: #10cfbd;
+    display: inline-block;
+    font-size: 55px;
+    font-weight: 100;
+    line-height: 1;
+    margin: 0;
+    overflow: hidden;
+    padding: 5px;
+    text-overflow: ellipsis;
+    text-shadow: 0 0 2px black;
+	max-width:100%;
+	font-family: roboto-thin;
+}
+.my_last_name {
+    background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+    color: #10cfbd;
+    display: inline-block;
+    font-size: 80px;
+    font-weight: bolder;
+    line-height: 1;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 0 0 2px black;
+    text-transform: uppercase;
+    width: 100%;
+}
+.userpage_my_image {
+    box-shadow: 4px 4px 20px black;
+    box-sizing: border-box;
+    margin: 20px auto;
+}
+@media screen and (max-width: 768px) {
+
+.my_first_name {
+
+}
+
+	.my_last_name {
+		font-size: 45px;
+	}
+}

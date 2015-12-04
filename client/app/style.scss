@@ -12,7 +12,7 @@
 }
 @font-face {
 	font-family: 'Roboto-Thin';
-	src: url('../assets/fonts/RobotoCondensed-Thin.ttf')  format('truetype');
+	src: url('../assets/fonts/Roboto-Thin.ttf')  format('truetype');
 }
 
 
@@ -210,7 +210,6 @@ section {
 	height: 100%;
     padding-left: 240px;
     width: 100%;
-	 margin-top: 50px;
 	transition-delay: 0s;
     transition-duration: 0.3s;
     transition-property: all;
@@ -254,6 +253,12 @@ section {
 	display:none;
 }
 @media screen and (max-width: 768px) {
+	section{
+		margin-top: 50px;
+	}
+
+
+
 	.xs-no-padding{
 		padding:0;
 	}
@@ -278,7 +283,7 @@ section {
     text-shadow: 0 0 2px black;
 }
 aside:hover .main-logo{
-    font-family: roboto-thin;
+    font-family: RobotoCondensed-Light;
    /* font-size: 65px;
     line-height: 60px;*/
     text-align: center;

@@ -1,11 +1,13 @@
-<div>
+<div class="col-sm-12">
 	<div class="gallery clearfix" masonry='{ "isFitWidth": true,"gutter": 10}'>
 		<div ng-repeat="(key, itm) in user_posts" class="masonry-brick gallery-item" ng-click="open(itm.id)" attr="{{itm.id}}" adaptive-background>
 			<div class="post_header clearfix">
-				<div class="post_author" style="background-image:url('{{itm.get('user_post_owner').get('smoll_avatar')}}')"></div>
+				<a href="userpage?id={{itm.get('user_post_owner').id}}" class="post_author" style="background-image:url('{{itm.get('user_post_owner').get('smoll_avatar')}}')"></a>
 				<div class="pull-left">
 					<b>{{itm.get('user_post_owner').get('username')}}</b>
-					<p class="text-black"><i class="fa fa-map-marker m-r-15"></i>Kyiv,novoz</p>
+					<p class="text-black"><i class="fa fa-clock-o m-r-10"></i>
+					<span  am-time-ago="itm.updatedAt"></span></p>
+
 				</div>
 				<div class="clearfix"></div>
 				<p class="post_text">{{itm.get('user_post_text')}}</p>

@@ -19,7 +19,7 @@
 </div>
 <div class="row">
 	<div class="news_block clearfix">
-		<div ng-repeat="(key, itm) in news"  class="news_element clearfix" ng-click="open(itm.id)" attr="{{itm.id}}" adaptive-background  ab-image-class="the-chosen-one">
+		<div ng-repeat="(key, itm) in news"  class="news_element clearfix" adaptive-background  ab-image-class="the-chosen-one">
 			<img class="the-chosen-one hide" src="{{itm.get('photo_src')}}" />
 			
 			<!--
@@ -39,7 +39,7 @@
 				</div>
 			</div>
 			-->
-			<div class="clearfix padding-20">
+			<div class="clearfix news_main_holder">
 			
 				<div class="col-sm-5" ng-class="$even ? '' : 'pull-right'">
 					<div class="row">
@@ -58,22 +58,25 @@
 					
 				</div>
 
-				<div class="col-sm-7" ng-if="itm.get('detail_photos') != null">
+				<div class="col-sm-7 pull-left" ng-if="itm.get('detail_photos') != null">
 						<div class="news_det_photo clearfix overflow"  >
 							<div class="news_det_phoho_elem" ng-repeat="(key, imgz) in itm.get('detail_photos') | limitTo:4" >
-								<div class="news_det_phoho_item" style="z-index:{{itm.get('detail_photos').length - key}};background:url('{{imgz.src}}')" alt="{{key}}"></div>
+								<div class="news_det_phoho_item" style="z-index:{{5 - key}};background:url('{{imgz.src}}')" alt="{{key}}"></div>
 							</div>
 						</div>
 				</div>
 
-				<div class="col-sm-7" ng-if="itm.get('detail_photos') == null">
+				<div class="col-sm-7 pull-left" ng-if="itm.get('detail_photos') == null">
 						<div class="news_det_photo clearfix overflow"  >
 							<div class="news_det_phoho_elem">
 								<div class="news_det_phoho_item" style="background:url('{{itm.get('photo_src')}}')"></div>
 							</div>
 						</div>
 				</div>
-
+				<div class="col-sm-12">
+					<p ng-class="$even ? '' : 'pull-right'"><i class="fa fa-clock-o m-r-10"></i>
+					<span  am-time-ago="itm.createdAt"></span><p>
+				</div>
 			</div>
 			<!--
 				<script type="text/ng-template" id="news_detail_modal">

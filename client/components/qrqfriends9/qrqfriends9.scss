@@ -1,7 +1,8 @@
 .qrq9 {
-    //border: 1px solid white;
     box-sizing: border-box;
+    display: inline-block;
     height: 120px;
+    vertical-align: top;
 		p {
 			color: white;
 			display: inline-block;
@@ -14,3 +15,8 @@
 			width: 100%;
 	}
 } 
+@media screen and (max-width: 768px) {
+	.qrq9 {
+		width: 33.3%;
+		}
+}

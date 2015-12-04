@@ -13,10 +13,12 @@ angular.module('qrqApp', [
   'ngImgCrop',
   'ngMap',
   'FBAngular',
-  'mb-adaptive-backgrounds'
+  'mb-adaptive-backgrounds',
+  'angularMoment'
 ])
-.run(function($rootScope){
+.run(function($rootScope,amMoment){
 	$rootScope.menu = false;
+    amMoment.changeLocale('ru');
 })
 .config(function($stateProvider, $urlRouterProvider, $locationProvider,adaptiveBackgroundsOptionsProvider) {
 	$urlRouterProvider
@@ -28,5 +30,4 @@ angular.module('qrqApp', [
 		darkClass: 'adb-dark',
 		imageClass: 'the-chosen-one'
 	  });
-	
 });

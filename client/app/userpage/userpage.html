@@ -7,10 +7,11 @@
 				<div class="col-sm-9">
 					<div class="row cover" style="background:url({{user_pade_ids.get('cover_big_photo')}})repeat scroll 0 0 / cover ">
 						<div class="col-sm-3">
-							<img src="{{user_pade_ids.get('big_avatar')}}"/>
+							<img class="userpage_my_image" src="{{user_pade_ids.get('big_avatar')}}"/>
 						</div>
 						<div class="col-sm-9">
-							<p>{{user_pade_ids.get('username')}}</p>
+							<p class="my_first_name">{{user_pade_ids.get('first_name')}}</p>
+							<p class="my_last_name">{{user_pade_ids.get('last_name')}}</p>
 							<a href="{{user_pade_ids.get('link_site')}}" ng-if="user_pade_ids.get('link_site') != null">My Facebook account</a>
 							<p>{{user_pade_ids.get('gender')}}</p>
 						</div>
@@ -25,7 +26,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3">
+				<div class="col-sm-3 no-padding">
 					<qrqfriends9></qrqfriends9>
 				</div>
 			</div>

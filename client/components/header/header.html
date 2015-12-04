@@ -24,6 +24,8 @@
 			<li><a><i class="fa fa-home m-r-15"></i>Про Нас</a></li>
 			<li><a ng-class="{'menu_active': menu == 'news'}" href="/news"><i class="fa fa-newspaper-o m-r-15"></i>Новини</a></li>
 			<li><a ng-class="{'menu_active': menu == 'users'}" href="/users"><i class="fa fa-users m-r-15"></i></i>Користувачі</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
 			<li><a ng-show="user == null" ng-click="login()"><i class="fa fa-sign-in m-r-15"></i>Войти</a></li>
 			<li><a ng-show="user != null" ng-click="logout()"><i class="fa fa-sign-out m-r-15"></i>Выйти</a></li>
 		</ul>

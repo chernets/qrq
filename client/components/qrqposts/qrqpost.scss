@@ -9,10 +9,6 @@
     margin-right: 10px;
     vertical-align: top;
     width: 30px;
-    -webkit-animation: leftslide 2.7s; /* Chrome, Safari, Opera */
-    -webkit-animation-delay: 1.5s; /* Chrome, Safari, Opera */
-    animation: leftslide 2.7s;
-    animation-delay: 1.5s;
 	position:relative;
 }
 }
@@ -29,20 +25,12 @@
 	color: #828282;
 	text-decoration: none;
 	opacity:0.5;
-	transition-delay: 0s;
-    transition-duration: 0.3s;
-    transition-property: all;
-    transition-timing-function: ease;
 	&:hover {
 		opacity:1;
 	}
 }
 .post_text {
     margin: 0;
-    -webkit-animation: leftslide 1.7s; /* Chrome, Safari, Opera */
-    -webkit-animation-delay: 3s; /* Chrome, Safari, Opera */
-    animation: leftslide 1.7s;
-    animation-delay: 3s;
 	position: relative;
 	color:$light_black;
 }
@@ -50,18 +38,6 @@
 .post-bot a i {
     display: block;
 }
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes leftslide {
-    from {left: -20px;}
-    to {left: 0px;}
-}
-
-@keyframes leftslide {
-    from {left: -20px;}
-    to {left: 0px;}
-}
-
 .gallery {
     width: 100%;
 }
@@ -80,9 +56,10 @@
 .gallery-item:nth-child(5n+6) {
 	    width: 510px;
 }
-@media only screen and (max-width: 640px) {
-	.gallery-item{
-			width: 100% !important;
+@media only screen and (max-width: 768px) {
+	.gallery-item {
+		margin: 0 !important;
+		width: 100% !important;
 	}
 }
 

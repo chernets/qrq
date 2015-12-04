@@ -20,7 +20,10 @@
     "angularjs-geolocation": "*",
     "ng-file-upload": "~9.0.10",
     "ng-img-crop": "~0.3.2",
-    "ngColorThief": "angular-colorthief#~0.1.0"
+    "ngColorThief": "angular-colorthief#~0.1.0",
+    "angular-moment": "~0.10.3",
+    "moment": "~2.10.6",
+    "moment-timezone": "~0.4.1"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.0"

@@ -17,6 +17,7 @@ angular.module('qrqApp')
 		  user_geo.save();
 	  }
     });*/
+
 	$scope.showMenu = function(){
 		$rootScope.menu = !$rootScope.menu;
 		return $rootScope.menu;

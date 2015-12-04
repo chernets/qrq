@@ -39,3 +39,11 @@
 .i-new {
     font-size: 0;
 }
+.news_main_holder{
+	padding:20px;
+}
+@media screen and (max-width: 768px) {
+	.news_main_holder{
+		padding:0;
+	}
+}

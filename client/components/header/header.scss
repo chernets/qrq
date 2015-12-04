@@ -5,7 +5,7 @@ header {
     padding-left: 240px;
     top: 0;
     width: 100%;
-    z-index: 4;
+    z-index: 10;
 	.navbar{
 		margin:0;
 		border:0 none;
@@ -15,5 +15,6 @@ header {
 @media screen and (max-width: 768px) {
 	header {
 		padding-left:0px;
+		position:fixed;
 	}
 }

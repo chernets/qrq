@@ -9,16 +9,14 @@ angular.module('qrqApp')
 	
 	if($stateParams.id){
 		qrquserposts = $stateParams.id;
-	}else{
-		
-		qrquserposts = user_page_me.id;
 	}
-	console.log("rhis" + qrquserposts);
-	
-	
+	$scope.message = {
+   text: 'hello world!',
+   time: new Date()
+};
 	$scope.loadPosts = function(){
 		var query = new Parse.Query("User_Posts");
-		query.descending("createdAt");
+		query.descending("updatedAt");
 		query.limit(limit);
 		query.include("user_post_owner");
 

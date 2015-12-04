@@ -7,12 +7,12 @@
 				<div class="row p-b-35">
 					<div class="col-sm-4" >
 						<h3>Ближащие квесты</h3>
-						<div class="near_quests clearfix" ng-repeat="(key, que) in n_quests">
-							<div class="col-sm-5 m-b-15 cover photo relative" style="background-image:url('{{que.get('quest_big_photo')}}')"></div>
+						<div class="near_quests clearfix bg-black" ng-repeat="(key, que) in n_quests">
+							<div class="col-sm-5 cover photo relative" style="background-image:url('{{que.get('quest_big_photo')}}')"></div>
 							<div class="col-sm-7 text-left">
-								<h4 class="no-margin">{{que.get('quest_name')}}</h3>
-								<p>{{que.get('quest_location')}}</p>
-								<p class="text-success">{{que.get('time_begin')}}</p>
+								<h3 class="m-t-10 text-white">{{que.get('quest_name')}}</h3>
+								<p class="text-success no-margin"><i class="fa fa-location-arrow m-r-10 hint-text"></i><span>{{que.get('quest_location')}}<span></p>
+								<p class="text-success"><i class="fa fa-clock-o m-r-10 hint-text"></i><span am-time-ago="que.get('time_begin')"></span></p>
 								<!--<p class="near_text">{{que.get('description')}}</p>-->
 							</div>
 							
@@ -44,7 +44,7 @@
 				<div class="row p-b-35">
 					<div class="col-sm-12">
 						<h3>Последние новости</h3>					
-						<qrqgalery newslimit="10"></qrqgalery>
+						<qrqgalery newslimit="5"></qrqgalery>
 					</div>
 				</div>
 				<div class="row">
