@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('qrqApp')
-  .controller('HeaderCtrl', function ($scope, $rootScope, geolocation) {
+  .controller('HeaderCtrl', function ($scope, geolocation) {
 
 	
 	var point;
@@ -18,10 +18,6 @@ angular.module('qrqApp')
 	  }
     });*/
 
-	$scope.showMenu = function(){
-		$rootScope.menu = !$rootScope.menu;
-		return $rootScope.menu;
-	}
 	
 	
 	$scope.user = Parse.User.current();

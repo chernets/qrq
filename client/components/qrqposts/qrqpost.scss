@@ -47,20 +47,19 @@
 	background: #ffffff none repeat scroll 0 0 padding-box;
     border-radius: 5px 5px 0 0;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-	overflow:hidden;
 	@media screen and (max-width: 800px) {
 		border-radius: 0;
 		width: 100%;
 	}
 }
-.gallery-item:nth-child(5n+6) {
-	    width: 510px;
-}
 @media only screen and (max-width: 768px) {
 	.gallery-item {
-		margin: 0 !important;
+		margin: 5px 0 !important;
 		width: 100% !important;
 	}
+}
+.gallery-item:nth-child(5n+6) {
+	    width: 510px;
 }
 
 

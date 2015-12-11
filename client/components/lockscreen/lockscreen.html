@@ -1,9 +1,15 @@
-<div class="lockscreen" ng-class="{show_lockscreen:lockscreen_active}" ng-controller="LockscreenCtrl" >
-	<div class="lock_photo cover"
-	style="background:url(https://pp.vk.me/c543103/v543103166/79e7/-wn9H1R2Vhg.jpg)">
+<div class="lockscreen" ng-class="{show_lockscreen:lockscreen_active}"> <!-- ng-class="{show_lockscreen:lockscreen_active}" -->  
+    
+<carousel class="full-width full-height" ng-swipe-left="next()" ng-swipe-right="prev()" ng-mouseleave="play()" ng-mouseenter="pause()" no-wrap="noWrapSlides" interval="10000">
+    <slide class="cover full-width full-height" ng-repeat="img in lockscreen_information" style="background:url({{img.webformatURL}})">
 		<div class="user_block">
-			<div class="lockscree_photo cover inline" style="background:url({{user.get('big_avatar')}})"></div>
 			<p class="lock_screen_name inline">{{user.get('username')}}</p>
 		</div>
-	</div>
+		<div class="loc_author_info bottom-right text-right">
+			<div class="" ng-if="img.userImageURL"><img src="{{img.userImageURL}}"/></div>
+			<h2><i class="fa fa-user m-r-30"></i>{{img.user}}</h2>
+			<p>{{img.tags}}</p>
+		</div>
+    </slide>
+</carousel>
 </div>

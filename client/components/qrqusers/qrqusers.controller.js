@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('qrqApp')
-  .controller('qrqusersCtrl', function ($scope, $rootScope) {
+  .controller('qrqusersCtrl', function ($scope) {
 	var curuser = Parse.User.current();
 
 	$scope.loadUsers = function(){
@@ -18,10 +18,12 @@ angular.module('qrqApp')
 		}
 		query.find({
 			success: function(results) {
-				for(var i=0; i<results.length; i++){
-					results[i].show = false;
-					results[i].cheakFollows = $scope.cheakFollow(results[i].id);
-				}
+                if(curuser){
+                    for(var i=0; i<results.length; i++){
+                        results[i].show = false;
+                        results[i].cheakFollows = $scope.cheakFollow(results[i].id);
+                    }
+                }
 				$scope.$apply(function() {
 					$scope.qrqusers = results;
 				});

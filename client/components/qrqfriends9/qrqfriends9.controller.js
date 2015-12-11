@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('qrqApp')
-  .controller('qrqfriends9Ctrl', function ($scope, $rootScope,$state,$stateParams) {
+  .controller('qrqfriends9Ctrl', function ($scope,$state,$stateParams) {
 	var user_page_me = Parse.User.current();
 	var userpage_id;
 	var folli;

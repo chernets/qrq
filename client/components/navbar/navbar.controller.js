@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('qrqApp')
-  .controller('NavbarCtrl', function ($scope, $rootScope, Fullscreen) {
+  .controller('NavbarCtrl', function ($scope, Fullscreen) {
 	$scope.user = Parse.User.current();
 	
    $scope.goFullscreen = function () {

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('qrqApp')
-  .controller('qrqgaleryCtrl', function($scope,$modal, $http,$rootScope) {
+  .controller('qrqgaleryCtrl', function($scope,$modal, $http) {
 	  
 	var skip = 0;
 	var limit = $scope.newslimit;
