@@ -1,0 +1,36 @@
+
+<navbar class="hidden-xs"></navbar>
+<header></header>
+<section class="clearfix xs-no-padding bg-black">
+		
+		<div class="container-fluid">
+			<div class="col-sm-6 xs-no-padding">
+				<!-- <qrqtimeline></qrqtimeline>-->
+				
+				<div>
+					<div class="m-b-5 time_shift" ng-repeat="(key , itm) in timeline_massive | orderBy:'-createdAt'" ng-class="{'time_posts' : itm.get('user_post_text'), 'time_news' : itm.get('category')}" when-visible="animateElementIn" when-not-visible="animateElementOut">
+						<div class="">
+							<div class="" ng-if="itm.get('user_post_text')">
+								<i class="fa fa-clock-o"></i>
+<span class="hint-text" am-time-ago="itm.createdAt"></span>
+								<p class="no-margin">{{itm.get('user_post_owner').get('username')}} Добавлен пост </p>
+								<p  class="no-margin">{{itm.get('user_post_text')}}</p>
+							</div>
+							<div class="" ng-if="itm.get('category')">
+								<i class="fa fa-clock-o"></i>
+<span class="hint-text" am-time-ago="itm.createdAt"></span>
+								<p  class="no-margin"> Добавлена новость {{itm.get('title_news')}}</p>
+								<p class="text-danger no-margin">{{itm.get('category')}}</p>
+								<p class="no-margin"><i class="fa fa-camera m-r-10"></i>
+ {{itm.get('detail_photos').length}} фотографий</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<!-- {{timeline_massive}}-->
+			</div>
+		</div>
+</section>	
+<footer></footer>

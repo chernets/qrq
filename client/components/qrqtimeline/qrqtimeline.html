@@ -1,0 +1,18 @@
+<timeline class="timeline-inverted">
+<timeline-event ng-repeat="timeline in timeline_posts">
+  <timeline-badge class="timeline_user_photo timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+	<img class="full-width" src="{{timeline.get('user_post_owner').get('smoll_avatar')}}"/>
+  </timeline-badge>
+  <timeline-panel class="timeline-panel timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+	<timeline-heading >
+	  <p class="inline no-margin">{{timeline.get('user_post_owner').get('first_name')}}
+	  <span>{{timeline.get('user_post_owner').get('last_name')}}</span></p>
+	<p class="inline no-margin"><i class="fa fa-clock-o m-r-5 m-l-5"></i>
+	<span  am-time-ago="timeline.updatedAt"></span></p>
+	</timeline-heading>
+	<p>{{timeline.get('user_post_file').get('src')}}</p>
+	<p>{{timeline.get('user_post_text')}}</p>
+	<img class="full-width" src="{{timeline.get('user_post_file')._url}}"/>
+  </timeline-panel>
+</timeline-event>
+</timeline>

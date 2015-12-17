@@ -14,7 +14,9 @@ angular.module('qrqApp', [
   'ngMap',
   'FBAngular',
   'mb-adaptive-backgrounds',
-  'angularMoment'
+  'angularMoment',
+  'angular-timeline',
+  'angular-scroll-animate'
 ])
 .run(function($rootScope,amMoment){
 	$rootScope.menu = false;

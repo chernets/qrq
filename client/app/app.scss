@@ -19,6 +19,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import 'qrq.scss';
 @import 'quests/quests.scss';
 @import 'style.scss';
+@import 'timeline/timeline.scss';
 @import 'userpage/userpage.scss';
 @import 'users/users.scss';
 @import '../components/footer/footer.scss';
@@ -28,4 +29,5 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import '../components/qrqfriends9/qrqfriends9.scss';
 @import '../components/qrqgalery/qrqgalery.scss';
 @import '../components/qrqposts/qrqpost.scss';
+@import '../components/qrqtimeline/qrqtimeline.scss';
 // endinjector

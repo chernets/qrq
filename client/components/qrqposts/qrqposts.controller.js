@@ -10,10 +10,6 @@ angular.module('qrqApp')
 	if($stateParams.id){
 		qrquserposts = $stateParams.id;
 	}
-	$scope.message = {
-   text: 'hello world!',
-   time: new Date()
-};
 	$scope.loadPosts = function(){
 		var query = new Parse.Query("User_Posts");
 		query.descending("updatedAt");

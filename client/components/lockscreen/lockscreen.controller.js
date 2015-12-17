@@ -12,7 +12,7 @@ angular.module('qrqApp')
 		  
 			var idleTimer = null;
 			var idleState = false;
-			var  idleWait = 30000;
+			var  idleWait = 60000;
 			
 		  $(document).bind('mousemove keydown scroll', function(){
 				$timeout.cancel(idleTimer); // отменяем прежний временной отрезок

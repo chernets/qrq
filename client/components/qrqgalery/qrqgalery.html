@@ -1,6 +1,6 @@
 <div class="row">
-	<div class="col-sm-6 m-b-15 no-padding">
-		<p class="inline">Сортировать по:</p>
+	<div class="col-sm-6">
+		<p class="">Сортировать по:</p>
 		<div class="btn-group ">
 			<button class="btn btn-primary">Все</button>
 			<button class="btn btn-primary">Новости</button>
@@ -8,8 +8,8 @@
 			<button class="btn btn-primary">Фото</button>
 		</div>
 	</div>
-	<div class="col-sm-6 text-right m-b-15 no-padding">
-		<p class="inline">Показывать по:</p>
+	<div class="col-sm-6 ">
+		<p class="">Показывать по:</p>
 		<div class="btn-group ">
 			<button class="btn btn-primary">5</button>
 			<button class="btn btn-primary">20</button>
@@ -17,7 +17,7 @@
 		</div>
 	</div>
 </div>
-<div class="row">
+<div class="row m-t-10 m-b-10">
 	<div class="news_block clearfix">
 		<div ng-repeat="(key, itm) in news"  class="news_element clearfix" adaptive-background  ab-image-class="the-chosen-one">
 			<img class="the-chosen-one hide" src="{{itm.get('photo_src')}}" />
@@ -41,7 +41,7 @@
 			-->
 			<div class="clearfix news_main_holder">
 			
-				<div class="col-sm-5" ng-class="$even ? '' : 'pull-right'">
+				<div class="col-sm-5 col-xs-12" ng-class="$even ? '' : 'pull-right'">
 					<div class="row">
 						<div class="col-sm-10">
 							<h3>{{itm.get('title_news')}}</h3>
@@ -116,6 +116,6 @@
 		-->
 	</div>
 	<div class="">
-		<button class="btn btn-primary full-width bg-black padding-15" ng-click="getMoreNews()">Get more</button>
+		<button class="btn btn-primary full-width padding-15" ng-click="getMoreNews()">Get more</button>
 	</div>
 </div>

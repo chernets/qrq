@@ -1,0 +1,83 @@
+.time_shift {
+    margin-bottom: 5px;
+    padding: 10px;
+}
+.time_posts {
+    border-left: 1px solid #1bc98e;
+}
+.time_news {
+	border-left: 1px solid #FE6806;
+}
+
+.bounce{
+	-webkit-animation: bounce 500ms ease-out;
+	-moz-animation: bounce 500ms ease-out;
+	-o-animation: bounce 500ms ease-out;
+	animation: bounce 500ms ease-out;
+}
+
+
+/* Mozilla Firefox 15 below */
+@-moz-keyframes bounce {
+  0% {
+	-moz-transform:translateX(-100%);
+    opacity: 0;
+  }
+
+  50% {
+  	-moz-transform:translateX(-30%);
+  }
+
+  100% {
+  	-moz-transform:translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Opera 12.0 */
+@-o-keyframes bounce {
+  0% {
+	-o-transform:translateX(-100%);
+    opacity: 0;
+  }
+
+  50% {
+  	-o-transform:translateX(-30%);
+  }
+
+  100% {
+  	-o-transform:translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+	-webkit-transform:translateX(-100%);
+    opacity: 0;
+  }
+
+  50% {
+  	-webkit-transform:translateX(-30%);
+  }
+
+  100% {
+  	-webkit-transform:translateX(0);
+    opacity: 1;
+  }
+}
+/* W3, Opera 12+, Firefox 16+ */
+@keyframes bounce {
+  0% {
+	transform:translateX(-100%);
+    opacity: 0;
+  }
+
+  50% {
+  	transform:translateX(-30%);
+  }
+
+  100% {
+  	transform:translateX(0);
+    opacity: 1;
+  }
+}
