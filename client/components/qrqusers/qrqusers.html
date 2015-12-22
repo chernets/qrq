@@ -1,21 +1,23 @@
 <map center="48.678466199999995,26.586808299999998" zoom="15">
 	<marker title="{{itm.get('username')}}" url="{{itm.get('big_avatar')}}" ng-repeat="(key, itm) in qrqusers" position="{{itm.get('my_position').latitude}} , {{itm.get('my_position').longitude}}"></marker>
 </map>
-<div class="col-sm-12 users_blocks no-padding relative clearfix"  ng-class="{'active' : itm.show}" ng-click="itm.show=!itm.show" ng-repeat="(key, itm) in qrqusers" data-id="{{key}}">
-	<div class="overflow avatar_bloccer col-xs-3 p-t-5 p-b-5 bg-master-darkest">
-		<div class="cover small_users_det_photo" style="background-image:url({{itm.get('big_avatar')}})"></div>
+
+
+<div class="col-sm-12 users_blocks no-padding relative clearfix"  ng-class="{'active' : itm.show}" ng-repeat="(key, itm) in qrqusers" data-id="{{key}}">
+	<div class="col-xs-3 p-t-5 p-b-5 bg-master-darkest">
+		<div class="cover small_users_det_photo" style="background-image:url({{itm.get('smoll_avatar')}})"></div>
 	</div>
-	<div class="text-white col-xs-9 p-t-5 p-b-5 changer bg-master-darkest">
+	<div class="text-white col-xs-8 p-t-5 p-b-5 bg-master-darkest">
 		<p class="no-margin"><i class="fa fa-user m-r-15 text-success"></i>{{itm.get('username')}}</p>
 		<p class="no-margin"><i class="fa fa-user m-r-15 text-success"></i>{{itm.get('gender')}}</p>
 		<small class="no-margin top-right hint-text p-t-5 p-r-15">1.1km</small>
 		<small ng-hide="itm.cheakFollows" class="no-margin bottom-right hint-text text-info p-r-15">Tap to follow</small>
 		<small ng-show="itm.cheakFollows" class="no-margin bottom-right hint-text text-success p-r-15">You R follow him</small>
 	</div>
-	<div class="hidden_user_button" ng-hide="itm.cheakFollows">
-		<button  ng-click="addFollow(itm)" class="btn btn-primary">+ Follow</button>
+	<div class="hidden_user_button col-xs-1" ng-hide="itm.cheakFollows">
+		<button  ng-click="addFollow(itm)" class="btn btn-primary"><i class="fa fa-check-circle m-r-10"></i>follow</button>
 	</div>
-	<div class="hidden_user_button " ng-show="itm.cheakFollows">
-		<button  ng-click="delFollow(itm)" class="btn btn-danger">- unFollow</button>
+	<div class="hidden_user_button col-xs-1" ng-show="itm.cheakFollows">
+		<button  ng-click="delFollow(itm)" class="btn btn-danger"><i class="fa fa-times-circle m-r-10"></i>unFollow</button>
 	</div>
 </div>

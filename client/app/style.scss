@@ -23,11 +23,12 @@ $light_black:#181a1d;
 $light_grey:#2b2e33;
 $light_bg:#f5f5f5;
 $light: 'Roboto-Light';
+$thin: 'Roboto-Thin';
 $color_success:#1bc98e;
 $color_primary:#6d5cae;
 
 body{
-	font-family:Helvetica;
+	font-family:$thin;
 	background:$light_bg;
 }
 .bg-grey{
@@ -61,7 +62,8 @@ p {
     color: #999;
 }
 h1,h2,h3,h4,h5{
-	color: $light_black;
+	color: $grey;
+	font-family:$thin;
 }
 
 /* Леваое меню */
@@ -155,7 +157,7 @@ aside nav li a {
     font-size: 24px;
     line-height: 24px;
     margin: 0;
-    padding: 15px;
+    padding: 14px 15px;
     text-transform: uppercase;
 }
 aside .menu_active span {

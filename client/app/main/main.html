@@ -1,58 +1,21 @@
 
-<navbar ng-class={active:menu}></navbar>
+<navbar></navbar>
 <header></header>
-<section class="<!--fixed_header--> clearfix xs-no-padding">
-		
-		<div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20  ">
-				<div class="row p-b-35">
-					<div class="col-sm-4" >
-						<h3>Ближащие квесты</h3>
-						<div class="near_quests clearfix bg-black" ng-repeat="(key, que) in n_quests">
-							<div class="col-sm-5 cover photo relative" style="background-image:url('{{que.get('quest_big_photo')}}')"></div>
-							<div class="col-sm-7 text-left">
-								<h3 class="m-t-10 text-white">{{que.get('quest_name')}}</h3>
-								<p class="text-success no-margin"><i class="fa fa-location-arrow m-r-10 hint-text"></i><span>{{que.get('quest_location')}}<span></p>
-								<p class="text-success"><i class="fa fa-clock-o m-r-10 hint-text"></i><span am-time-ago="que.get('time_begin')"></span></p>
-								<!--<p class="near_text">{{que.get('description')}}</p>-->
-							</div>
-							
-						</div>
-						<!--
-						<div class="col-sm-8">
-							<h2 class="text-danger">{{que.get('time_begin')}}</h2>
-							<h3>{{que.get('quest_name')}}</h3>
-							<h4>{{que.get('quest_location')}}</h4>
-							<p>{{que.get('description')}}</p>
-
-							{{que.get('points_of_quest')}}
-							{{que.get('quest_active')}}  
-						</div>
-						-->
-					</div>
-					<div class="col-sm-4 no-padding" >
-						<h3>Новые пользователи</h3>
-						<div class="m-t-15 m-b-15" >
-							<qrqusers userslimit="8" sortby="createdAt"></qrqusers>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<a href="/addnews" class="btn btn-primary">Добавить фото</a>
-					</div>
-				</div>
-				
-				
-				<div class="row p-b-35">
-					<div class="col-sm-12">
-						<h3>Последние новости</h3>					
-						<qrqgalery newslimit="5"></qrqgalery>
-					</div>
-				</div>
-				<div class="row">
-					
-						<h3>Последние посты</h3>
-						<qrqposts newslimit="20"></qrqposts> 
-					 
-				</div>
+<section class="clearfix xs-no-padding">
+	<div class="col-sm-12 bg-black p-b-25" ng-if="is_auth">
+		<div class="col-sm-6 clearfix">
+			<h1>Ви не авторизований користувач</h1>
+			<h4 class="">Авторизуйтесь , для додавання своїх фотографій і постів</h4>
+			<p class="no-margin">Щоб увійти в нашу систему, ми пропонуємо авторизуватись через <span>Facebook</span>.</p>
+			<p>Ми отримаємо лише інформацію про вас, а не Ваші персональні данні.</p>
+			<button class="btn btn-primary" ng-click="login()" ng-show="user == null">Увійти</button>
 		</div>
+	</div>
+	<div class="col-sm-12 bg-black p-b-25 text-center" ng-if="!is_auth">
+		<a href="/addnews" class="btn btn-primary"><i class="fa fa-camera m-r-10"></i>Добавити пост</a>
+	</div>
+	<div class="col-sm-12">
+			<qrqposts newslimit="20"></qrqposts> 
+	</div>
 </section>	
 <footer></footer>
