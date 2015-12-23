@@ -1,8 +1,7 @@
 'use strict';
 
 angular.module('qrqApp')
-  .controller('addnewsCtrl', function($scope, Upload, $http) {
-	  
+  .controller('addnewsCtrl', function($scope, Upload, $http,$state) {
 	  
 	var currentUser = Parse.User.current();
 	var name = "image";
@@ -65,6 +64,7 @@ angular.module('qrqApp')
 			UserPost.save(null, {
 			  success: function(UserPost) {
 				alert('Все успешно кончилось');
+				$state.go('main');
 			  },
 			  error: function(UserPost, error) {
 				alert('Упс, что-то пошло не так!',error);

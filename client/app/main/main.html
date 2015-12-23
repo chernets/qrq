@@ -11,10 +11,10 @@
 			<button class="btn btn-primary" ng-click="login()" ng-show="user == null">Увійти</button>
 		</div>
 	</div>
-	<div class="col-sm-12 bg-black p-b-25 text-center" ng-if="!is_auth">
+	<div class="col-sm-12 bg-black p-b-25 p-t-25 text-center" ng-if="!is_auth">
 		<a href="/addnews" class="btn btn-primary"><i class="fa fa-camera m-r-10"></i>Добавити пост</a>
 	</div>
-	<div class="col-sm-12">
+	<div class="container xs-no-padding">
 			<qrqposts newslimit="20"></qrqposts> 
 	</div>
 </section>	

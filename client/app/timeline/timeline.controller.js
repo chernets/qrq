@@ -27,7 +27,9 @@ angular.module('qrqApp')
 		query.find({
 			success: function(results) {
 				for (var i = 0; i < results.length; i++) {
+					$scope.$apply(function() {
 						$scope.timeline_massive.push(results[i]); 
+					})
 				}
 			},
 			error: function(error) {
@@ -62,7 +64,25 @@ angular.module('qrqApp')
 		queryn.find({
 			success: function(results) {
 				for (var i = 0; i < results.length; i++) {
+					$scope.$apply(function() {
 						$scope.timeline_massive.push(results[i]);
+					});
+				}
+			},
+			error: function(error) {
+				console.log(error);
+			}
+		});
+		var queryU = new Parse.Query(Parse.User);
+		queryU.descending("createdAt");
+		queryU.limit(20);
+		//query.include("user_post_owner");		
+		queryU.find({
+			success: function(results) {
+				for (var i = 0; i < results.length; i++) {
+					$scope.$apply(function() {
+						$scope.timeline_massive.push(results[i]);
+					});
 				}
 			},
 			error: function(error) {

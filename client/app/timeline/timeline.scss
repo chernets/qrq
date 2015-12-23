@@ -1,7 +1,7 @@
 .time_shift {
     margin-bottom: 5px;
     padding: 10px;
-	opacity:1;
+	opacity:0;
 }
 .time_posts {
     border-left: 1px solid #1bc98e;
@@ -9,12 +9,24 @@
 .time_news {
 	border-left: 1px solid #FE6806;
 }
+.time_user{
+	border-left: 1px solid #428bca;
+	img {
+		border: 2px solid #428bca;
+		border-radius: 50%;
+		box-sizing: border-box;
+		height: auto;
+		margin: 10px;
+		width: 50px;
+	}
+}
 
 .bounce{
 	-webkit-animation: bounce 500ms ease-out;
 	-moz-animation: bounce 500ms ease-out;
 	-o-animation: bounce 500ms ease-out;
 	animation: bounce 500ms ease-out;
+	opacity:1;
 }
 
 

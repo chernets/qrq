@@ -43,7 +43,8 @@
 }
 .gallery-item {
     margin-bottom: 10px;
-    width: 250px;
+    width: 49%;
+	max-width:500px;
 	background: #ffffff none repeat scroll 0 0 padding-box;
     border-radius: 5px 5px 0 0;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -58,10 +59,11 @@
 		width: 100% !important;
 	}
 }
+/*
 .gallery-item:nth-child(5n+6) {
 	    width: 510px;
 }
-
+*/
 
 .adb-dark {
 	p {

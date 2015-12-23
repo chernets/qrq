@@ -1,24 +1,16 @@
 <navbar class="hidden-xs"></navbar>
 <header></header>
 <section class=" clearfix xs-no-padding">
-
 		<div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
 			<h3>Добавление Фото</h3>
-			
 				<div class="col-sm-3 m-b-30">
 					<form validate  class="" enctype="multipart/form-data">
 						<div class="input-group"> 
-							<input type="file" onchange="angular.element(this).scope().handleFileSelect(this)" id="fileInput" />
+							<input type="file" class="btn btn-primary full-width" onchange="angular.element(this).scope().handleFileSelect(this)" id="fileInput" />
 							<div class="cropArea">
 								<img-crop image="myImage" area-min-size="400" result-image-format="image/jpeg" area-type="square" result-image-size="1000" result-image="newsadd.image"></img-crop>
 							</div>
 						</div>
-						<!--
-						<div class="input-group">
-							<label for="title">Title</label>
-							<input ng-model="newsadd.title" id="title" type="text" placeholder="Title" class="form-control" required>
-						</div>
-						-->
 						<div class="input-group">
 							<label for="text_news">Текст к Вашей новости</label>
 							<textarea ng-model="newsadd.text" type="text" placeholder="Text news" class="form-control" required></textarea>
@@ -31,23 +23,24 @@
 				
 				<div class="gallery-item col-sm-3" adaptive-background>
 					<div class="post_header clearfix">
-						<div class="post_author" style="background-image:url('https://scontent.xx.fbcdn.net/hprofile-xlt1/v/t1.0-1/p50x50/11951946_842941295813740_3737236020154671941_n.jpg?oh=49b124fe0daa4212b15531c1fdff083e&oe=569970DC')">
+						<div class="post_author" style="background-image:url('{{user.get('smoll_avatar')}}')">
 							
 						</div>
 						<div class="pull-left">
 							<b>{{user.get('username')}}</b>
-							<p class="text-black"><i class="fa fa-map-marker m-r-15"></i>Kyiv,novoz</p>
+							<!--<p class="text-black"><i class="fa fa-map-marker m-r-15"></i>Kyiv,novoz</p>-->
 						</div>
 						<div class="clearfix"></div>
 						<p class="post_text">{{newsadd.text}}</p>
 					</div>
 					<img ng-show="newsadd.image.length > 0" src="{{newsadd.image}}" class="full-width">
-
+					<!--
 						<div class="post_bottom clearfix">
 							<div class="post-bot"><a href=""><i class="fa fa-heart"></i>0</a></div>
 							<div class="post-bot"><a><i class="fa fa-comments-o"></i>Comments</a></div>
 							<div class="post-bot"><a><i class="fa fa-share-alt"></i>Share</a></div>
 						</div> 
+						-->
 				</div>
 			
 		</div>
