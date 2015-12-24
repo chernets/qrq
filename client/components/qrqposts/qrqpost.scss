@@ -44,10 +44,21 @@
 .gallery-item {
     margin-bottom: 10px;
     width: 49%;
-	max-width:500px;
 	background: #ffffff none repeat scroll 0 0 padding-box;
     border-radius: 5px 5px 0 0;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+		&.big_posts {
+			width: 100%;
+		}
+		&.minimal_posts {
+			width: 240px;
+		}
+		&.double_post{
+			width: 49%;
+			max-width:500px;
+		}
+		
+		
 	@media screen and (max-width: 800px) {
 		border-radius: 0;
 		width: 100%;

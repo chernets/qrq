@@ -1,12 +1,20 @@
 'use strict';
 
 angular.module('qrqApp')
-  .controller('qrqpostsCtrl', function($scope, $http,$state,$stateParams) {
+  .controller('qrqpostsCtrl', function($scope,$rootScope, $http,$state,$stateParams,$timeout) {
 	  
 	var user_page_me = Parse.User.current();
 	var limit = $scope.newslimit;
 	var qrquserposts;
-	
+
+	$scope.checkModel = {
+		value: 'double_posts'
+	};
+	$scope.$watch('checkModel.value',function(){
+			$timeout(function () {
+				$rootScope.$broadcast('masonry.reload');
+			}, 500);
+	});
 	if($stateParams.id){
 		qrquserposts = $stateParams.id;
 	}

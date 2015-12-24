@@ -1,6 +1,22 @@
 <div class="col-sm-12 xs-no-padding">
+
+	<div class="text-center p-t-20 p-b-20 hidden-xs">		
+		<div class="btn-group" role="group">
+		  <button type="button" class="btn btn-primary" ng-click="checkModel.value = 'big_posts'">
+			<i class="fa fa-square"></i>
+		  </button>
+		  <button type="button" class="btn btn-primary" ng-click="checkModel.value = 'double_posts'">
+			<i class="fa fa-th-large"></i>
+		  </button>
+		  <button type="button" class="btn btn-primary" ng-click="checkModel.value = 'minimal_posts'">
+			<i class="fa fa-th"></i>
+		  </button>
+		</div>
+	</div>
+
+
 	<div class="gallery clearfix" masonry='{ "isFitWidth": true,"gutter": 10}'>
-		<div ng-repeat="(key, itm) in user_posts" class="masonry-brick gallery-item" ng-click="open(itm.id)" attr="{{itm.id}}" adaptive-background>
+		<div ng-repeat="(key, itm) in user_posts" class="masonry-brick gallery-item {{checkModel.value}}" ng-click="open(itm.id)" attr="{{itm.id}}" adaptive-background>
 			<div class="post_header clearfix">
 				<a href="userpage?id={{itm.get('user_post_owner').id}}" class="post_author" style="background-image:url('{{itm.get('user_post_owner').get('smoll_avatar')}}')"></a>
 				<div class="pull-left">
